@@ -1,0 +1,433 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Moein Dictionary\n"
+"POT-Creation-Date: 2022-12-12 15:19+0330\n"
+"PO-Revision-Date: 2022-12-12 15:19+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: moein-dictionary-free.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: inc/admin/add-word.php:19
+msgid "Add/Edit Word"
+msgstr "افزودن/ویرایش واژه"
+
+#: inc/admin/add-word.php:20 inc/admin/add-word.php:42
+#: inc/admin/words-list.php:51
+msgid "Add Word"
+msgstr "افزودن واژه"
+
+#: inc/admin/add-word.php:35
+msgid "Edit Word"
+msgstr "ویرایش واژه"
+
+#: inc/admin/add-word.php:50 inc/admin/dashboard.php:18
+#: inc/admin/dashboard.php:19 inc/admin/data-template.php:5
+#: inc/admin/settings-template.php:5
+msgid "Moein Dictionary"
+msgstr "فرهنگ معین"
+
+#: inc/admin/add-word.php:50 inc/admin/data-template.php:5
+#: inc/admin/settings-template.php:5
+msgid " » "
+msgstr ""
+
+#: inc/admin/add-word.php:63 inc/admin/words-table.php:9
+#: inc/admin/words-table.php:57
+msgid "Word"
+msgstr "واژه"
+
+#: inc/admin/add-word.php:67 inc/admin/words-table.php:60
+msgid "Description"
+msgstr "شرح"
+
+#: inc/admin/add-word.php:75 inc/admin/settings-template.php:83
+msgid "Save"
+msgstr "ذخیره"
+
+#: inc/admin/add-word.php:90
+msgid "The word must not be empty!"
+msgstr "واژه نباید خالی باشد!"
+
+#: inc/admin/add-word.php:108 inc/admin/settings.php:107
+msgid "You do not have permission to access this section!"
+msgstr "شما مجوز دسترسی به این بخش را ندارید!"
+
+#: inc/admin/add-word.php:108 inc/admin/settings.php:107
+msgid "Error!"
+msgstr "خطا!"
+
+#: inc/admin/dashboard-template.php:8
+msgid "Moein Persian dictionary"
+msgstr "فرهنگ لغت فارسی معین"
+
+#: inc/admin/dashboard-template.php:17
+msgid "About the plugin"
+msgstr "درباره افزونه"
+
+#: inc/admin/dashboard-template.php:21
+#, php-format
+msgid "Name: %s"
+msgstr "نام: %s"
+
+#. Plugin Name of the plugin/theme
+#: inc/admin/dashboard-template.php:21
+msgid "Moein Dictionary(free)"
+msgstr "فرهنگ معین(رایگان)"
+
+#: inc/admin/dashboard-template.php:23
+#, php-format
+msgid "Number of available words: %s"
+msgstr "تعداد واژه‌های موجود: %s"
+
+#: inc/admin/dashboard-template.php:26 inc/admin/import-data.php:24
+msgid "Install the data"
+msgstr "داده‌ها را نصب کنید"
+
+#: inc/admin/dashboard-template.php:30
+#, php-format
+msgid "Version: %s"
+msgstr "نگارش: %s"
+
+#: inc/admin/dashboard-template.php:30
+msgid "free version"
+msgstr "نگارش رایگان"
+
+#: inc/admin/dashboard-template.php:35
+msgid "User manual:"
+msgstr "راهنمای استفاده:"
+
+#: inc/admin/dashboard-template.php:37
+msgid ""
+"Use the <b>mdict_search</b> shortcode to display the dictionary search "
+"engine."
+msgstr ""
+"برای نمایش جستجوگر لغت‌نامه از کد کوتاه <b>mdict_search</b> استفاده کنید."
+
+#: inc/admin/dashboard-template.php:38
+msgid "Sample:"
+msgstr "مثال:"
+
+#: inc/admin/dashboard-template.php:42
+msgid "Using the shortcode in the content of the pages:"
+msgstr "از کد کوتاه زیر داخل محتوای برگه‌ها استفاده کنید:"
+
+#: inc/admin/dashboard-template.php:45
+msgid "You can also use shortcode inside php codes:"
+msgstr "همچنین می‌توانید از کد کوتاه زیر درون کدهای php استفاده کنید:"
+
+#: inc/admin/data-template.php:5 inc/admin/import-data.php:34
+#: inc/admin/import-data.php:35
+msgid "Data installation"
+msgstr "نصب داده‌ها"
+
+#: inc/admin/data-template.php:23
+#, php-format
+msgid "Step %d"
+msgstr "مرحله %d"
+
+#: inc/admin/data-template.php:29 inc/functions.php:62
+msgid "Installed"
+msgstr "نصب شده"
+
+#: inc/admin/data-template.php:29 inc/functions.php:64
+msgid "Install"
+msgstr "نصب"
+
+#: inc/admin/data-template.php:36
+msgid "Please be patient. This may take a minute or more."
+msgstr "لطفاً صبور باشید. ممکن است یک یا چند دقیقه طول بکشد."
+
+#: inc/admin/data-template.php:44
+msgid "Go to commercial version"
+msgstr "برو به نسخه تجاری"
+
+#: inc/admin/data-template.php:45
+#, php-format
+msgid "This step is only available on the commercial version. %s"
+msgstr "این مرحله فقط بر روی نسخه تجاری در دسترس است. %s"
+
+#: inc/admin/import-data.php:24
+msgid "Moein Dictionary data is not fully installed."
+msgstr "داده های فرهنگ لغت معین به طور کامل نصب نشده است."
+
+#: inc/admin/import-data.php:43
+msgid "Dashboard"
+msgstr "پیشخوان"
+
+#: inc/admin/import-data.php:90
+msgid "It is already installed."
+msgstr "قبلاً نصب شده است."
+
+#: inc/admin/import-data.php:138
+msgid "Data not found!"
+msgstr "داده‌ها یافت نشد!"
+
+#: inc/admin/settings-template.php:5 inc/admin/settings.php:77
+#: inc/admin/settings.php:78
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: inc/admin/settings-template.php:19
+msgid "Inherit"
+msgstr "ارث‌بری"
+
+#: inc/admin/settings-template.php:20
+msgid "Vazir"
+msgstr "وزیر"
+
+#: inc/admin/settings-template.php:21
+msgid "Vazir(Persian number)"
+msgstr "وزیر(شماره فارسی)"
+
+#: inc/admin/settings-template.php:34
+msgid "Dictionary page"
+msgstr "برگه فرهنگ لغت"
+
+#: inc/admin/settings-template.php:50
+msgid "Word meaning tooltip"
+msgstr "ابزار معنی واژه"
+
+#: inc/admin/settings-template.php:52
+msgid "Active"
+msgstr "فعال‌سازی"
+
+#: inc/admin/settings-template.php:55
+msgid ""
+"By activating this option, the meaning tooltip will be displayed after "
+"selecting the word on the site."
+msgstr ""
+"با فعال کردن این گزینه پس از انتخاب واژه، ابزار نمایش معنی در سایت نمایش "
+"داده خواهد شد."
+
+#: inc/admin/settings-template.php:59
+msgid "Font"
+msgstr "قلم"
+
+#: inc/admin/settings-template.php:76
+msgid "Font size"
+msgstr "اندازه فونت"
+
+#: inc/admin/settings.php:93
+msgid "Settings saved successfully."
+msgstr "تنظیمات با موفقیت ذخیره شد."
+
+#: inc/admin/words-list.php:20 inc/admin/words-list.php:21
+msgid "Words List"
+msgstr "لیست واژه‌ها"
+
+#: inc/admin/words-list.php:35 inc/admin/words-table.php:10
+msgid "Words"
+msgstr "واژه‌ها"
+
+#: inc/admin/words-list.php:50 inc/templates/searchbox.php:55
+msgid "List of words"
+msgstr "لیست واژه‌ها"
+
+#: inc/admin/words-list.php:56
+msgid "Search word"
+msgstr "جستجوی لغت"
+
+#: inc/admin/words-table.php:31
+#, php-format
+msgid "%d item(s) were removed."
+msgstr "%d مورد حذف شد."
+
+#: inc/admin/words-table.php:39
+msgid "Please select one or more."
+msgstr "لطفاً موردی را انتخاب کنید."
+
+#: inc/admin/words-table.php:51 inc/templates/searchbox.php:85
+msgid "Nothing found!"
+msgstr "موردی یافت نشد!"
+
+#: inc/admin/words-table.php:61
+msgid "ID"
+msgstr "شناسه"
+
+#: inc/admin/words-table.php:74
+msgid "Delete"
+msgstr "حذف"
+
+#: inc/admin/words-table.php:120
+msgid "Edit"
+msgstr "ویرایش"
+
+#: inc/functions.php:13
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/functions.php:14
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: inc/functions.php:15
+msgid "First"
+msgstr "اولی"
+
+#: inc/functions.php:16
+msgid "Last"
+msgstr "آخری"
+
+#: inc/functions.php:35
+msgid "Search for words in the dictionary"
+msgstr "جستجوی واژه در فرهنگ لغت"
+
+#: inc/functions.php:36
+msgid "Meaning"
+msgstr "معنی"
+
+#: inc/functions.php:63
+msgid "Installing"
+msgstr "در حال نصب"
+
+#: inc/functions.php:65
+msgid "Plugin license registration successful."
+msgstr "ثبت لایسنس افزونه با موفقیت انجام شد."
+
+#: inc/functions.php:66
+msgid "Error: The request failed!"
+msgstr "خطا: درخواست با شکست مواجه شد!"
+
+#: inc/functions.php:67
+msgid "Error: "
+msgstr "خطا: "
+
+#: inc/functions.php:68
+msgid "Please enter the activation code!"
+msgstr "لطفا کد فعال سازی را وارد کنید!"
+
+#: inc/install.php:20
+msgid "Moein dictionary"
+msgstr "فرهنگ معین"
+
+#: inc/templates/description.php:15
+msgid "Print"
+msgstr "چاپ"
+
+#: inc/templates/searchbox.php:29
+msgid "Word search"
+msgstr "جستجوی واژه"
+
+#: inc/templates/searchbox.php:35
+msgid "Enter a word"
+msgstr "واژه مورد نظر را وارد کنید"
+
+#: inc/templates/searchbox.php:40
+msgid "Search in words"
+msgstr "جستجو در واژه‌ها"
+
+#: inc/templates/searchbox.php:41
+msgid "Search in the meaning of words"
+msgstr "جستجو در معنای واژه‌ها"
+
+#: inc/templates/searchbox.php:45
+msgid "Search"
+msgstr "جستجو"
+
+#: inc/templates/searchbox.php:55
+#, php-format
+msgid "Searching for the meaning of %s"
+msgstr "جستجوی معنی %s"
+
+#: inc/templates/searchbox.php:55
+msgid "Total:"
+msgstr "تعداد کل:"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/moein-dictionary-free"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Moein Persian dictionary(free version)"
+msgstr "فرهنگ لغت فارسی معین(نگارش رایگان)"
+
+#. Author of the plugin/theme
+msgid "ham3da"
+msgstr "ham3da"
+
+#. Author URI of the plugin/theme
+msgid "https://ham3da.ir"
+msgstr ""
+
+#~ msgid "License"
+#~ msgstr "لایسنس"
+
+#~ msgid "Error checking license status!"
+#~ msgstr "خطا در بررسی وضعیت لایسنس!"
+
+#~ msgid "License Registration"
+#~ msgstr "ثبت لایسنس"
+
+#~ msgid "Status:"
+#~ msgstr "وضعیت:"
+
+#~ msgid "Congratulations! This plugin is active."
+#~ msgstr "تبریک می‌گوییم! این افزونه فعال‌سازی شده است."
+
+#~ msgid "This plugin requires a license to use it."
+#~ msgstr "برای استفاده از این پلاگین باید لایسنس آن را ثبت کنید."
+
+#~ msgid "Help: "
+#~ msgstr "راهنما: "
+
+#, php-format
+#~ msgid ""
+#~ "After purchasing this product on %s, a license key has been assigned to "
+#~ "your order, which you can view in your user panel."
+#~ msgstr ""
+#~ "بعد از خرید این محصول از %s، یک کلید لایسنس به سفارش شما اختصاص داده شده "
+#~ "است که می‌توانید آن را در پنل کاربری خود مشاهده کنید."
+
+#~ msgid "License:"
+#~ msgstr "لایسنس:"
+
+#~ msgid "Submit"
+#~ msgstr "ثبت"
+
+#, php-format
+#~ msgid "To complete the activation of the %s plugin, please %s."
+#~ msgstr "برای تکمیل فعالسازی افزونه %s، لطفاً %s."
+
+#~ msgid "register the plugin license"
+#~ msgstr "لایسنس افزونه را ثبت کنید"
+
+#~ msgid ""
+#~ "The license of Moin dictionary plugin is not registered. Please register "
+#~ "the plugin license."
+#~ msgstr ""
+#~ "لایسنس افزونه فرهنگ معین ثبت نشده است. لطفاً لایسنس افزونه را ثبت کنید."
+
+#~ msgid "Javad Ahshamian"
+#~ msgstr "جواد احشامیان"
+
+#~ msgid "About us"
+#~ msgstr "درباره ما"
+
+#, php-format
+#~ msgid "Developer: %s"
+#~ msgstr "توسعه دهنده: %s"
+
+#, php-format
+#~ msgid "Email: %s"
+#~ msgstr "ایمیل: %s"
+
+#, php-format
+#~ msgid "Telegram: %s"
+#~ msgstr "تلگرام: %s"
+
+#~ msgid "Persian Dictionary"
+#~ msgstr "فرهنگ لغت فارسی"

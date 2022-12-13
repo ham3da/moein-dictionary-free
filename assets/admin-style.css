@@ -1,0 +1,753 @@
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/Vazirmatn[wght].woff2') format('woff2'),
+        url('fonts/Vazirmatn[wght].ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/Vazirmatn[wght].woff2') format('woff2'),
+        url('fonts/Vazirmatn[wght].ttf') format('truetype');
+    ;
+    font-display: swap;
+}
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Vazirmatn[wght].woff2') format('woff2'),
+        url('fonts/Vazirmatn[wght].ttf') format('truetype');
+    ;
+    font-display: swap;
+}
+
+
+
+
+.wp-admin.jetpack_page_mdict-key-config, 
+.wp-admin.settings_page_mdict-key-config {
+	background-color:#f3f6f8;
+}
+
+#submitted-on {
+    position: relative;
+}
+
+#dashboard_recent_comments .mdict-status {
+    display: none;
+}
+.mdict-status {
+    float: right;
+}
+.mdict-status a {
+    color: #AAA;
+    font-style: italic;
+}
+table.comments td.comment p a {
+    text-decoration: underline;
+}
+table.comments td.comment p a:after {
+    content: attr(href);
+    color: #aaa;
+    display: inline-block; /* Show the URL without the link's underline extending under it. */
+    padding: 0 1ex; /* Because it's inline block, we can't just use spaces in the content: attribute to separate it from the link text. */
+}
+.mshot-arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #5C5C5C;
+    position: absolute;
+    left: -6px;
+    top: 91px;
+}
+.mshot-container {
+    background: #5C5C5C;
+    position: absolute;
+    top: -94px;
+    padding: 7px;
+    width: 450px;
+    height: 338px;
+    z-index: 20000;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.mdict-mshot {
+    position: absolute;
+    z-index: 100;
+}
+.mdict-mshot .mshot-image {
+    margin: 0;
+    height: 338px;
+    width: 450px;
+}
+.checkforspam {
+    display: inline-block !important;
+}
+
+.checkforspam-spinner {
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.mdict-right {
+	float: right;
+}
+
+.mdict-card .mdict-right {
+	margin: 1em 0;
+}
+
+.mdict-alert-text {
+	color: #dd3d36;
+	font-weight: bold;
+	font-size: 120%;
+	margin-top: .5rem;
+}
+.mdict-alert {
+	padding: 0.4em 1em 1.4em 1em;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+}
+
+.mdict-alert h3.mdict-key-status {
+	color: #fff;
+	margin: 1em 0 0.5em 0;
+}
+
+.mdict-alert.mdict-critical {
+	background-color: #0073aa;
+}
+
+.mdict-alert.mdict-active {
+	background-color: #649316;
+}
+
+.mdict-alert p.mdict-key-status {
+	font-size: 24px;
+}
+
+.mdict-alert p.mdict-description {
+	color:#fff;
+	font-size: 14px;
+    margin: 0 0;
+	font-style: normal;
+}
+
+.mdict-alert p.mdict-description a,
+.mdict-alert p.mdict-description a,
+.mdict-alert p.mdict-description a,
+.mdict-alert p.mdict-description a {
+	color: #fff;
+}
+
+.mdict-new-snapshot {
+	margin-top: 1em;
+	padding: 1em;
+	text-align: center;
+	background: #fff;
+}
+
+.mdict-new-snapshot h3 {
+    background: #f5f5f5;
+	color: #888;
+	font-size: 11px;
+    margin: 0;
+    padding: 3px;
+}
+
+.new-snapspot ul {
+	font-size: 12px;
+	width: 100%;
+}
+
+.mdict-new-snapshot ul li {
+    color: #999;
+	float: left;
+    font-size: 11px;
+	padding: 0 20px;
+    text-transform: uppercase;
+	width: 33%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+.mdict-new-snapshot ul li:first-child,
+.mdict-new-snapshot ul li:nth-child(2) {
+	border-right:1px dotted #ccc;
+}
+
+.mdict-new-snapshot ul li span {
+    color: #52accc;
+	display: block;
+	font-size: 32px;
+	font-weight: lighter;
+	line-height: 1.5em;
+}
+
+.mdict-settings th:first-child {
+	vertical-align: top;
+	padding-top: 15px;
+}
+
+.mdict-settings th.mdict-api-key {
+	vertical-align: middle;
+	padding-top: 0;
+}
+
+.mdict-settings input[type=text] {
+	width: 75%;
+}
+
+.mdict-settings span.mdict-note{
+	float: left;
+	padding-left: 23px;
+	font-size: 75%;
+	margin-top: -10px;
+}
+
+/**
+ * For the activation notice on the plugins page.
+ */
+
+#mdict_setup_prompt {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.mdict_activate {
+	border: 1px solid #4F800D;
+	padding: 5px;
+	margin: 15px 0;
+	background: #83AF24;
+	background-image: -webkit-gradient(linear, 0% 0, 80% 100%, from(#83AF24), to(#4F800D));
+	background-image: -moz-linear-gradient(80% 100% 120deg, #4F800D, #83AF24);
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+}
+
+.mdict_activate .aa_a {
+	position: absolute;
+	top: -5px;
+	right: 10px;
+	font-size: 140px;
+	color: #769F33;
+}
+
+.mdict_activate .aa_button {
+	font-weight: bold;
+	border: 1px solid #029DD6;
+	border-top: 1px solid #06B9FD;
+	font-size: 15px;
+	text-align: center;
+	padding: 9px 0 8px 0;
+	color: #FFF;
+	background: #029DD6;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6), to(#0079B1));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #0079B1, #029DD6);
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	width: 100%;
+	cursor: pointer;
+	margin: 0;
+}
+
+.mdict_activate .aa_button:hover {
+	text-decoration: none !important;
+	border: 1px solid #029DD6;
+	border-bottom: 1px solid #00A8EF;
+	font-size: 15px;
+	text-align: center;
+	padding: 9px 0 8px 0;
+	color: #F0F8FB;
+	background: #0079B1;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#0079B1), to(#0092BF));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #0092BF, #0079B1);
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.mdict_activate .aa_button_border {
+	border: 1px solid #006699;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #029DD6;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6), to(#0079B1));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #0079B1, #029DD6);
+}
+
+.mdict_activate .aa_button_container {
+	box-sizing: border-box;
+	display: inline-block;
+	background: #DEF1B8;
+	padding: 5px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	width: 266px;
+}
+
+.mdict_activate .aa_description {
+	position: absolute;
+	top: 22px;
+	left: 285px;
+	margin-left: 25px;
+	color: #E5F2B1;
+	font-size: 15px;
+}
+
+.mdict_activate .aa_description strong {
+	color: #FFF;
+	font-weight: normal;
+}
+
+@media (max-width: 550px) {
+	.mdict_activate .aa_a {
+		display: none;
+	}
+	
+	.mdict_activate .aa_button_container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 782px) {
+	.mdict_activate {
+		min-width: 0;
+	}
+}
+
+@media (max-width: 850px) {
+	#mdict_setup_prompt .aa_description {
+		display: none;
+	}
+	
+	.mdict_activate {
+		min-width: 0;
+	}
+}
+
+.jetpack_page_mdict-key-config #wpcontent, .settings_page_mdict-key-config #wpcontent {
+	padding-left: 0;
+}
+
+.mdict-masthead {
+	background-color:#fff;
+	text-align:center;
+	box-shadow:0 1px 0 rgba(200,215,225,0.5),0 1px 2px #e9eff3
+}
+@media (max-width: 45rem) {
+	.mdict-masthead {
+		padding:0 1.25rem
+	}
+}
+
+.mdict-masthead__inside-container {
+	padding:.375rem 0;
+	margin:0 auto;
+	width:100%;
+	max-width:45rem;
+	
+}
+.mdict-text-center{
+    text-align: center;
+}
+
+.mdict-text-right{
+    text-align: right;
+}
+
+.mdict-text-left{
+    text-align: left;
+}
+
+.mdict-masthead__logo-container {
+	padding:.3125rem 0 0
+}
+.mdict-masthead__logo {
+	width:10.375rem;
+	height:1.8125rem;
+}
+.mdict-masthead__logo-link {
+	display:inline-block;
+	outline:none;
+	vertical-align:middle
+}
+.mdict-masthead__logo-link:focus {
+	line-height:0;
+	box-shadow:0 0 0 2px #78dcfa
+}
+.mdict-masthead__logo-link+code {
+	margin:0 10px;
+	padding:5px 9px;
+	border-radius:2px;
+	background:#e6ecf1;
+	color:#647a88
+}
+.mdict-masthead__links {
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-flow:row wrap;
+	flex-flow:row wrap;
+	-ms-flex:2 50%;
+	flex:2 50%;
+	-ms-flex-pack:end;
+	justify-content:flex-end;
+	margin:0
+}
+@media (max-width: 480px) {
+	.mdict-masthead__links {
+		padding-right:.625rem
+	}
+}
+.mdict-masthead__link-li {
+	margin:0;
+	padding:0
+}
+.mdict-masthead__link {
+	font-style:normal;
+	color:#0087be;
+	padding:.625rem;
+	display:inline-block
+}
+.mdict-masthead__link:visited {
+	color:#0087be
+}
+.mdict-masthead__link:active,.mdict-masthead__link:hover {
+	color:#00aadc
+}
+.mdict-masthead__link:hover {
+	text-decoration:underline
+}
+.mdict-masthead__link .dashicons {
+	display:none
+}
+@media (max-width: 480px) {
+	.mdict-masthead__link:hover,.mdict-masthead__link:active {
+		text-decoration:none
+	}
+	.mdict-masthead__link .dashicons {
+		display:block;
+		font-size:1.75rem
+	}
+	.mdict-masthead__link span+span {
+		display:none
+	}
+}
+.mdict-masthead__link-li:last-of-type .mdict-masthead__link {
+	padding-right:0
+}
+
+.mdict-lower {
+	margin: 0 auto;
+/*	text-align: center;*/
+	max-width: 45rem;
+	padding: 1.5rem;
+}
+
+.mdict-lower .notice {
+	margin-bottom: 2rem;
+}
+
+.mdict-card {
+	margin-top: 1rem;
+	margin-bottom: 0;
+	position: relative;
+	margin: 0 auto 0.625rem auto;
+	box-sizing: border-box;
+	background: white;
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+}
+
+.mdict-card:after, .mdict-card .inside:after, .mdict-masthead__logo-container:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.mdict-card .inside {
+	padding: 1.5rem;
+	padding-top: 1rem;
+}
+
+.mdict-card .mdict-card-actions {
+	margin-top: 1rem;
+}
+
+.jetpack_page_mdict-key-config .update-nag, .settings_page_mdict-key-config .update-nag {
+    display: none;
+}
+
+.mdict-masthead .mdict-right {
+	line-height: 2.125rem;
+	font-size: 0.9rem;
+}
+
+.mdict-box {
+	box-sizing: border-box;
+	background: white;
+	border: 1px solid rgba(200, 215, 225, 0.5);
+}
+
+.mdict-box h2, .mdict-box h3 {
+	padding: 1.5rem 1.5rem .5rem 1.5rem;
+	margin: 0;
+}
+
+.mdict-box p,
+.mdict-box ul,
+.mdict-box h4
+{
+	padding: 0 1.5rem 1.5rem 1.5rem;
+	margin: 0;
+}
+
+.mdict-jetpack-email {
+	font-style: oblique;
+}
+
+.mdict-jetpack-gravatar {
+	padding: 0 0 0 1.5rem;
+	float: left;
+	margin-right: 1rem;
+	width: 54px;
+	height: 54px;
+}
+	
+.mdict-box p:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.mdict-box .mdict-right {
+	padding-right: 1.5rem;
+}
+
+.mdict-boxes .mdict-box {
+	margin-bottom: 0;
+	padding: 0;
+	margin-top: -1px;
+}
+
+.mdict-boxes .mdict-box:last-child {
+	margin-bottom: 1.5rem;
+}
+
+.mdict-boxes .mdict-box:first-child {
+	margin-top: 1.5rem;
+}
+
+.mdict-box-header {
+	max-width: 700px;
+	margin: 0 auto 40px auto;
+	line-height: 1.5;
+}
+
+.mdict-box-header h2 {
+	margin: 1.5rem 10% 0;
+	font-size: 1.375rem;
+	font-weight: 700;
+	color: #000;
+}
+
+.mdict-box .centered {
+	text-align: center;
+}
+
+.mdict-enter-api-key-box {
+	margin: 1.5rem 0;
+}
+
+.mdict-box .enter-api-key {
+	display: none;
+	margin-top: 1.5rem;
+}
+
+.mdict-box .mdict-toggles {
+	margin: 3rem 0;
+}
+
+.mdict-box .mdict-ak-connect, .mdict-box .toggle-jp-connect {
+	display: none;
+}
+
+.mdict-box .enter-api-key p {
+	padding: 0 1.5rem;
+}
+
+.mdict-button, .mdict-button:hover, .mdict-button:visited {
+	background: white;
+	border-color: #c8d7e1;
+	border-style: solid;
+	border-width: 1px 1px 2px;
+	color: #2e4453;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	outline: 0;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 500;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	vertical-align: top;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 21px;
+	border-radius: 4px;
+	padding: 7px 14px 9px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.mdict-button:hover {
+	border-color: #a8bece;
+}
+
+.mdict-button:active {
+	border-width: 2px 1px 1px;
+}
+
+.mdict-is-primary, .mdict-is-primary:hover, .mdict-is-primary:visited {
+	background: #00aadc;
+	border-color: #0087be;
+	color: white;
+}
+
+.mdict-is-primary:hover, .mdict-is-primary:focus {
+    border-color: #005082;
+}
+
+.mdict-is-primary:hover {
+	border-color: #005082;
+}
+
+.mdict-section-header {
+	position: relative;
+	margin: 0 auto 0.625rem auto;
+	padding: 1rem;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+	background: #ffffff;
+	width: 100%;
+	padding-top: 0.6875rem;
+	padding-bottom: 0.6875rem;
+	display: flex;
+}
+
+.mdict-section-header__label {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	line-height: 1.75rem;
+	position: relative;
+	font-size: 0.875rem;
+	color: #4f748e;
+}
+
+.mdict-section-header__actions {
+	line-height: 1.75rem;
+}
+
+.mdict-setup-instructions {
+	text-align: center;
+}
+
+.mdict-setup-instructions form {
+	padding-bottom: 1.5rem;
+}
+
+div.error.mdict-usage-limit-alert {
+	padding: 25px 45px 25px 15px;
+	display: flex;
+	align-items: center;
+}
+
+#mdict-plugin-container .mdict-usage-limit-alert {
+	margin: 0 auto 0.625rem auto;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+	border: none;
+	border-left: 4px solid #d63638;
+}
+
+.mdict-usage-limit-alert .mdict-usage-limit-logo {
+	width: 38px;
+	min-width: 38px;
+	height: 38px;
+	border-radius: 20px;
+	margin-right: 18px;
+	background: black;
+	position: relative;
+}
+
+.mdict-usage-limit-alert .mdict-usage-limit-logo img {
+	position: absolute;
+	width: 22px;
+	left: 8px;
+	top: 10px;
+}
+
+.mdict-usage-limit-alert .mdict-usage-limit-text {
+	flex-grow: 1;
+	margin-right: 18px;
+}
+
+.mdict-usage-limit-alert h3 {
+	margin: 0;
+}
+
+.mdict-usage-limit-alert .mdict-usage-limit-cta {
+	text-align: right;
+}
+
+@media (max-width: 550px) {
+	div.error.mdict-usage-limit-alert {
+		display: block;
+	}
+
+	.mdict-usage-limit-alert .mdict-usage-limit-logo,
+	.mdict-usage-limit-alert .mdict-usage-limit-text {
+		margin-bottom: 15px;
+	}
+
+	.mdict-usage-limit-alert .mdict-usage-limit-cta {
+		text-align: left;
+	}
+}
+
+#mdict-plugin-container .wrap
+{
+    margin: 10px 10px 10px 10px;
+}
+
+.mdict-box p.description
+{
+    padding: 0
+}

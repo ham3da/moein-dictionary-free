@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/Vazirmatn[wght].woff2') format('woff2'),
+        url('fonts/Vazirmatn[wght].ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/Vazirmatn[wght].woff2') format('woff2'),
+        url('fonts/Vazirmatn[wght].ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Vazirmatn[wght].woff2') format('woff2'),
+        url('fonts/Vazirmatn[wght].ttf') format('truetype');
+    font-display: swap;
+}
+
+.rtl
+{
+    direction: rtl;
+}
+.ltr
+{
+    direction: ltr;
+}
+.bootstrap-iso .pagination
+{
+    flex-wrap: wrap;
+}
+
+.bootstrap-iso *
+{
+    font-family: inherit;
+}
+
+.mdict table th,
+.mdict table td
+{
+    text-align: right;
+}
+.mdict table td a, .mdict a.page-link
+{
+    text-decoration: none !important;
+}
+a.mdict-print {
+    background-size: 36px;
+    height: 36px;
+    width: 36px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: none, url("printer.svg");
+    color: #3c434a;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 auto 25px;
+    padding: 0;
+    text-decoration: none;
+    text-indent: -9999px;
+    outline: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.mdict-tooltip a
+{
+    color: #fff;
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.mdict-tooltip a:hover
+{
+    color: yellow;
+}
+
+
+.mdict-tooltip::before {
+    content: '';
+    display: block;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.5em solid rgba(14,17,17,0.9);
+    position: absolute;
+    top: 0;
+    margin-top: -0.5em;
+}
+
+.bootstrap-iso a.mdict-word-link
+{
+    text-decoration: none !important;
+}
+
+@media (max-width:768px)
+{
+    .mdict form button.btn
+    {
+        display: block;
+        width: 100%;
+    }
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    position: relative;
+    padding: 3px 0.4em 3px 1em;
+}
