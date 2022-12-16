@@ -33,8 +33,7 @@ class MDict_SearchTools
     public static function get_wors_count() {
         global $wpdb;
         $table = $wpdb->prefix . "pn_mdict";
-        $query = "SELECT COUNT(*) FROM `$table`";
-        return $wpdb->get_var($query);
+        return $wpdb->get_var("SELECT COUNT(*) FROM `$table`");
     }
 
     public static function search($word, $sb = 1) {
@@ -43,35 +42,29 @@ class MDict_SearchTools
         $current_page = self::get_pagenum();
         $per_page = self::$perpage;
         $offset = ($current_page - 1) * $per_page;
-        $where = "";
-        $order_by = "`Word` ASC";
         $query_total = 0;
         $query_res = null;
         
         if (!empty($word))
         {
+            $word = esc_sql($word);
             if ($sb == 1)
             {
-                $where .= "Where `Word` LIKE '%s'";
-                $order_by = "LOCATE('%s', Word), `Word` ASC";
 
-                $query_total = $wpdb->prepare("SELECT COUNT(*) FROM `$table` $where", "%$word%");
-                $query_res = $wpdb->prepare("SELECT * FROM `$table` $where ORDER BY $order_by LIMIT $offset , $per_page", "%$word%", $word);
+                $query_total = $wpdb->prepare("SELECT COUNT(*) FROM `$table` Where `Word` LIKE '%s'", "%$word%");
+                $query_res = $wpdb->prepare("SELECT * FROM `$table` Where `Word` LIKE '%s' ORDER BY LOCATE('%s', Word), `Word` ASC LIMIT %d , %d", "%$word%", $word, $offset , $per_page);
             }
             else
             {
 
-                $where .= "Where `Description` LIKE '%s'";
-                $order_by = "`Word` ASC";
-
-                $query_total = $wpdb->prepare("SELECT COUNT(*) FROM `$table` $where", "%$word%");
-                $query_res = $wpdb->prepare("SELECT * FROM `$table` $where ORDER BY $order_by LIMIT $offset , $per_page", "%$word%");
+                $query_total = $wpdb->prepare("SELECT COUNT(*) FROM `$table` Where `Description` LIKE '%s'", "%$word%");
+                $query_res = $wpdb->prepare("SELECT * FROM `$table` `Description` LIKE '%s' ORDER BY `Word` ASC LIMIT %d , %d", "%$word%", $offset , $per_page);
             }
         }
         else
         {
             $query_total = "SELECT COUNT(*) FROM `$table`";
-            $query_res = "SELECT * FROM `$table` ORDER BY $order_by LIMIT $offset , $per_page";
+            $query_res = $wpdb->prepare("SELECT * FROM `$table` ORDER BY `Word` ASC LIMIT %d, %d", $offset , $per_page);
         }
 
 

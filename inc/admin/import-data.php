@@ -14,8 +14,8 @@ class MDict_Import_Data
     }
 
     function check_data_installed() {
-        
-        $page = filter_input(INPUT_GET, 'page'); 
+
+        $page = filter_input(INPUT_GET, 'page');
         if ($page != 'mdict-data-intall')
         {
             $w_count = MDict_SearchTools::get_wors_count();
@@ -50,18 +50,25 @@ class MDict_Import_Data
         include MDC_PLUGIN_DIR . 'inc/admin/data-template.php';
     }
 
+    public static function generate_wpdb_prepare($array) {
+        $placeholders = array_map(function ($item) {
+            return is_numeric($item) ? '%f' : ( is_float($item) ? '%f' : (  is_string($item) ? '%s' : '' ) );
+        }, $array);
+        return '(' . join(',', $placeholders) . ')';
+    }
+
     public static function is_installed($file_name) {
 
         $all_data = [
-            'data_1' => '174,5281', 
-            'data_2' => '5282,10000',
-            'data_3' => '10001,15483', 
-            'data_4' => '15484,20000',
-            'data_5' => '20001,25183', 
-            'data_6' => '25184,30000',
-            'data_7' => '30001,33006',
-            'data_8' => '33007,36271'
-            ];
+            'data_1' => "174,5281",
+            'data_2' => "5282,10000",
+            'data_3' => "10001,15483",
+            'data_4' => "15484,20000",
+            'data_5' => "20001,25183",
+            'data_6' => "25184,30000",
+            'data_7' => "30001,33006",
+            'data_8' => "33007,36271"
+        ];
 
         global $wpdb;
         $table = $wpdb->prefix . "pn_mdict";
@@ -69,8 +76,11 @@ class MDict_Import_Data
         $ids = $all_data[$file_name] ?? null;
         if ($ids)
         {
-            $query_res = "SELECT COUNT(*) FROM $table WHERE `id` IN($ids)";
-            $res = $wpdb->get_var($query_res);
+            $items = explode(",", $ids);
+            $in_str = self::generate_wpdb_prepare($items);
+            $sql = "SELECT COUNT(*) FROM $table WHERE `id` IN {$in_str}";
+           // print_r($wpdb->prepare($sql, $items));
+            $res = $wpdb->get_var($wpdb->prepare($sql, $items));
             return $res == 2;
         }
         else
@@ -106,7 +116,7 @@ class MDict_Import_Data
 
             if (mysqli_connect_errno())
             {
-                die( "Failed to connect to MySQL: " . mysqli_connect_error());
+                die("Failed to connect to MySQL: " . mysqli_connect_error());
             }
 
             $utf8 = mysqli_set_charset($con, "utf8");

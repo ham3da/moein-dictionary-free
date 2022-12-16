@@ -25,9 +25,11 @@ class MDict_Words_Table extends WP_List_Table
 
             if (isset($posted_data['id']))
             {
-                $ids = implode(',', $posted_data['id']);
+                //$ids = implode(',', $posted_data['id']);
 
-                $wpdb->query($wpdb->prepare("DELETE FROM `$table` WHERE `id` IN(%s)", $ids));
+                $ids_str = MDict_Import_Data::generate_wpdb_prepare($posted_data['id']);
+                
+                $wpdb->query($wpdb->prepare("DELETE FROM `$table` WHERE `id` IN{$ids_str}", $posted_data['id']));
 
                 $count = count($posted_data['id']);
                 add_action('admin_notices', function () use ($count) {
@@ -84,9 +86,11 @@ class MDict_Words_Table extends WP_List_Table
 
         $this->_column_headers = $this->get_column_info();
         $per_page = $this->get_items_per_page('mdict_wl_per_page', 20);
+        $per_page = esc_sql($per_page);
+        
         $current_page = $this->get_pagenum();
 
-        $offset = ($current_page - 1) * $per_page;
+        $offset = esc_sql( ($current_page - 1) * $per_page);
 
         $table_name = $wpdb->prefix . "pn_mdict";
 
@@ -107,11 +111,11 @@ class MDict_Words_Table extends WP_List_Table
 
             if (!empty($orderby) & !empty($order))
             {
-                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` Where `Word` LIKE '%s' ORDER BY $orderby $order LIMIT $offset, $per_page", $s));
+                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` Where `Word` LIKE '%s' ORDER BY $orderby $order LIMIT %d, %d", $s, $offset, $per_page));
             }
             else
             {
-                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` Where `Word` LIKE '%s' LIMIT $offset, $per_page", $s));
+                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` Where `Word` LIKE '%s' LIMIT %d, %d", $s, $offset, $per_page));
             }
         }
         else
@@ -121,11 +125,11 @@ class MDict_Words_Table extends WP_List_Table
             
             if (!empty($orderby) & !empty($order))
             {
-                $this->items = $wpdb->get_results("SELECT * FROM `$table_name` ORDER BY $orderby $order LIMIT $offset, $per_page");
+                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` ORDER BY $orderby $order LIMIT %d, %d", $offset, $per_page));
             }
             else
             {
-                $this->items = $wpdb->get_results("SELECT * FROM `$table_name` LIMIT $offset, $per_page");
+                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` LIMIT %d, %d", $offset, $per_page ));
             }
         }
 
