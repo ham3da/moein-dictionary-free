@@ -20,14 +20,14 @@ $w_count = MDict_SearchTools::get_wors_count();
                     <ul>
                         <li>✔ <?php printf(__('Name: %s', 'mdict'), __('Moein Dictionary(free)', 'mdict')); ?></li>
                         <li>✔ <?php
-                            echo sprintf(__('Number of available words: %s', 'mdict'), number_format($w_count));
+                            printf(__('Number of available words: %s', 'mdict'), number_format($w_count));
                             if ($w_count < MDict_SearchTools::get_check_count())
                             {
-                                echo ' 🔔 <a href="'. admin_url('admin.php?page=mdict-data-intall').'">'.__('Install the data', 'mdict') .'</a>';
+                                ?>🔔 <a href="<?php echo esc_url(admin_url('admin.php?page=mdict-data-intall')) ?>"><?php _e('Install the data', 'mdict') ?></a><?php
                             }
                             ?>
                         </li>
-                        <li>✔ <?php printf(__('Version: %s', 'mdict'), MDC_PLUGIN_VERSION).' - ' .__('free version', 'mdict'); ?></li>
+                        <li>✔ <?php printf(__('Version: %s', 'mdict'), MDC_PLUGIN_VERSION) . ' - ' . __('free version', 'mdict'); ?></li>
 
                     </ul>
 

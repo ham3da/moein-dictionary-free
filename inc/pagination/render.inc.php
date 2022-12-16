@@ -16,7 +16,7 @@ elseif ($current > $pages)
 if ($pages > 1 || $alwaysShowPagination === true)
 {
     ?>
-    <ul class="<?php echo implode(' ', $classes) ?>">
+    <ul class="<?php echo esc_attr(implode(' ', $classes)) ?>">
         <?php
         /**
          * Previous Link
@@ -39,7 +39,7 @@ if ($pages > 1 || $alwaysShowPagination === true)
             array_push($classes, 'disabled');
         }
         ?>
-        <li class="page-item <?php echo implode(' ', $classes) ?>"><a class="page-link" href="<?php echo esc_url($href_first) ?>"><?php echo ($first) ?></a></li>
+        <li class="page-item <?php echo esc_attr(implode(' ', $classes)) ?>"><a class="page-link" href="<?php echo esc_url($href_first) ?>"><?php echo esc_html($first) ?></a></li>
         <?php
         $classes = array('copy', 'previous');
 
@@ -58,7 +58,7 @@ if ($pages > 1 || $alwaysShowPagination === true)
         }
         ?>
 
-        <li class="page-item <?php echo implode(' ', $classes) ?>"><a class="page-link" href="<?php echo esc_url($href) ?>"><?php echo ($previous) ?></a></li>
+        <li class="page-item <?php echo esc_attr( implode(' ', $classes)) ?>"><a class="page-link" href="<?php echo esc_url($href) ?>"><?php echo esc_html($previous) ?></a></li>
         <?php
         /**
          * if this isn't a clean output for pagination (eg. show numerical
@@ -108,13 +108,13 @@ if ($pages > 1 || $alwaysShowPagination === true)
                         $href
                 );
                 ?>
-                <li class="page-item"><a class="page-link" data-pagenumber="<?php echo ($current + $x - $leading) ?>" href="<?php echo esc_url($href) ?>"><?php echo ($current + $x - $leading) ?></a></li>
+        <li class="page-item"><a class="page-link" data-pagenumber="<?php echo esc_attr($current + $x - $leading) ?>" href="<?php echo esc_url($href) ?>"><?php echo esc_html($current + $x - $leading) ?></a></li>
                 <?php
             }
 
             // print current page
             ?>
-            <li class="page-item active"><a class="page-link" data-pagenumber="<?php echo ($current) ?>" href="#"><?php echo ($current) ?></a></li>
+        <li class="page-item active"><a class="page-link" data-pagenumber="<?php echo esc_attr($current) ?>" href="#"><?php echo esc_html($current) ?></a></li>
             <?php
             // generate/render trailing crumbs
             for ($x = 0; $x < $trailing; ++$x)
@@ -130,7 +130,7 @@ if ($pages > 1 || $alwaysShowPagination === true)
                         $href
                 );
                 ?>
-                <li class="page-item"><a class="page-link" data-pagenumber="<?php echo ($current + $x + 1) ?>" href="<?php echo esc_url($href) ?>"><?php echo ($current + $x + 1) ?></a></li>
+        <li class="page-item"><a class="page-link" data-pagenumber="<?php echo esc_attr($current + $x + 1) ?>" href="<?php echo esc_url($href) ?>"><?php echo esc_html($current + $x + 1) ?></a></li>
                 <?php
             }
         }
@@ -163,9 +163,9 @@ if ($pages > 1 || $alwaysShowPagination === true)
                 $href_last
         );
         ?>
-        <li class="page-item <?php echo implode(' ', $classes) ?>"><a class="page-link" href="<?php echo esc_url($href) ?>"><?php echo ($next) ?></a></li>
+        <li class="page-item <?php echo esc_attr(implode(' ', $classes)) ?>"><a class="page-link" href="<?php echo esc_url($href) ?>"><?php echo esc_html($next) ?></a></li>
 
-        <li class="page-item <?php echo implode(' ', $classes) ?>"><a class="page-link" href="<?php echo esc_url($href_last) ?>"><?php echo ($last) ?></a></li>
+        <li class="page-item <?php echo esc_attr(implode(' ', $classes)) ?>"><a class="page-link" href="<?php echo esc_url($href_last) ?>"><?php echo esc_html($last) ?></a></li>
 
     </ul>
     <?php

@@ -2,45 +2,6 @@
 
 /**
  * Pagination
- * 
- * Supplies an API for setting pagination details, and renders the resulting
- * pagination markup (html) through the included render.inc.php file.
- * 
- * @note    The SEO methods (canonical/rel) were written following Google's
- *          suggested patterns. Namely, the canoical url excludes any 
- *          peripheral parameters that don't relate to the pagination
- *          series. Whereas the prev/next rel link tags include any params
- *          found in the request.
- * @author  Oliver Nassar <onassar@gmail.com>
- * @todo    add setter parameter type and range checks w/ exceptions
- * @example
- * <code>
- *     // source inclusion
- *     require_once APP . '/vendors/PHP-Pagination/Pagination.class.php';
- *     
- *     // determine page (based on <_GET>)
- *     $page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
- *     
- *     // instantiate with page and records as constructor parameters
- *     $pagination = (new Pagination($page, 200));
- *     $markup = $pagination->parse();
- * </code>
- * @example
- * <code>
- *     // source inclusion
- *     require_once APP . '/vendors/PHP-Pagination/Pagination.class.php';
- *     
- *     // determine page (based on <_GET>)
- *     $page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
- *     
- *     // instantiate; set current page; set number of records
- *     $pagination = (new Pagination());
- *     $pagination->setCurrent($page);
- *     $pagination->setTotal(200);
- *     
- *     // grab rendered/parsed pagination markup
- *     $markup = $pagination->parse();
- * </code>
  */
 class Pagination
 {

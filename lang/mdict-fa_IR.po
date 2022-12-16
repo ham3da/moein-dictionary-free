@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Moein Dictionary\n"
-"POT-Creation-Date: 2022-12-12 15:19+0330\n"
-"PO-Revision-Date: 2022-12-12 15:19+0330\n"
+"POT-Creation-Date: 2022-12-16 15:04+0330\n"
+"PO-Revision-Date: 2022-12-16 15:04+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -25,48 +25,48 @@ msgstr ""
 msgid "Add/Edit Word"
 msgstr "افزودن/ویرایش واژه"
 
-#: inc/admin/add-word.php:20 inc/admin/add-word.php:42
+#: inc/admin/add-word.php:20 inc/admin/add-word.php:45
 #: inc/admin/words-list.php:51
 msgid "Add Word"
 msgstr "افزودن واژه"
 
-#: inc/admin/add-word.php:35
+#: inc/admin/add-word.php:38
 msgid "Edit Word"
 msgstr "ویرایش واژه"
 
-#: inc/admin/add-word.php:50 inc/admin/dashboard.php:18
-#: inc/admin/dashboard.php:19 inc/admin/data-template.php:5
+#: inc/admin/add-word.php:54 inc/admin/dashboard.php:18
+#: inc/admin/dashboard.php:19 inc/admin/data-template.php:4
 #: inc/admin/settings-template.php:5
 msgid "Moein Dictionary"
 msgstr "فرهنگ معین"
 
-#: inc/admin/add-word.php:50 inc/admin/data-template.php:5
+#: inc/admin/add-word.php:55 inc/admin/data-template.php:4
 #: inc/admin/settings-template.php:5
 msgid " » "
 msgstr ""
 
-#: inc/admin/add-word.php:63 inc/admin/words-table.php:9
-#: inc/admin/words-table.php:57
+#: inc/admin/add-word.php:70 inc/admin/words-table.php:9
+#: inc/admin/words-table.php:62
 msgid "Word"
 msgstr "واژه"
 
-#: inc/admin/add-word.php:67 inc/admin/words-table.php:60
+#: inc/admin/add-word.php:74 inc/admin/words-table.php:63
 msgid "Description"
 msgstr "شرح"
 
-#: inc/admin/add-word.php:75 inc/admin/settings-template.php:83
+#: inc/admin/add-word.php:81 inc/admin/settings-template.php:78
 msgid "Save"
 msgstr "ذخیره"
 
-#: inc/admin/add-word.php:90
+#: inc/admin/add-word.php:96
 msgid "The word must not be empty!"
 msgstr "واژه نباید خالی باشد!"
 
-#: inc/admin/add-word.php:108 inc/admin/settings.php:107
+#: inc/admin/add-word.php:114 inc/admin/settings.php:106
 msgid "You do not have permission to access this section!"
 msgstr "شما مجوز دسترسی به این بخش را ندارید!"
 
-#: inc/admin/add-word.php:108 inc/admin/settings.php:107
+#: inc/admin/add-word.php:114 inc/admin/settings.php:106
 msgid "Error!"
 msgstr "خطا!"
 
@@ -93,7 +93,7 @@ msgstr "فرهنگ معین(رایگان)"
 msgid "Number of available words: %s"
 msgstr "تعداد واژه‌های موجود: %s"
 
-#: inc/admin/dashboard-template.php:26 inc/admin/import-data.php:24
+#: inc/admin/dashboard-template.php:26 inc/admin/import-data.php:25
 msgid "Install the data"
 msgstr "داده‌ها را نصب کنید"
 
@@ -129,46 +129,46 @@ msgstr "از کد کوتاه زیر داخل محتوای برگه‌ها است
 msgid "You can also use shortcode inside php codes:"
 msgstr "همچنین می‌توانید از کد کوتاه زیر درون کدهای php استفاده کنید:"
 
-#: inc/admin/data-template.php:5 inc/admin/import-data.php:34
-#: inc/admin/import-data.php:35
+#: inc/admin/data-template.php:4 inc/admin/import-data.php:35
+#: inc/admin/import-data.php:36
 msgid "Data installation"
 msgstr "نصب داده‌ها"
 
-#: inc/admin/data-template.php:23
+#: inc/admin/data-template.php:21
 #, php-format
-msgid "Step %d"
-msgstr "مرحله %d"
+msgid "Part %d"
+msgstr "قسمت %d"
 
-#: inc/admin/data-template.php:29 inc/functions.php:62
+#: inc/admin/data-template.php:27 inc/functions.php:82
 msgid "Installed"
 msgstr "نصب شده"
 
-#: inc/admin/data-template.php:29 inc/functions.php:64
+#: inc/admin/data-template.php:27 inc/functions.php:84
 msgid "Install"
 msgstr "نصب"
 
-#: inc/admin/data-template.php:36
+#: inc/admin/data-template.php:34
 msgid "Please be patient. This may take a minute or more."
 msgstr "لطفاً صبور باشید. ممکن است یک یا چند دقیقه طول بکشد."
 
-#: inc/admin/data-template.php:44
+#: inc/admin/data-template.php:42
 msgid "Go to commercial version"
 msgstr "برو به نسخه تجاری"
 
-#: inc/admin/data-template.php:45
+#: inc/admin/data-template.php:43
 #, php-format
-msgid "This step is only available on the commercial version. %s"
-msgstr "این مرحله فقط بر روی نسخه تجاری در دسترس است. %s"
+msgid "This part is only available on the commercial version. %s"
+msgstr "این قسمت فقط بر روی نسخه تجاری در دسترس است. %s"
 
-#: inc/admin/import-data.php:24
+#: inc/admin/import-data.php:25
 msgid "Moein Dictionary data is not fully installed."
-msgstr "داده های فرهنگ لغت معین به طور کامل نصب نشده است."
+msgstr "داده‌های فرهنگ لغت معین به طور کامل نصب نشده است."
 
-#: inc/admin/import-data.php:43
+#: inc/admin/import-data.php:44
 msgid "Dashboard"
 msgstr "پیشخوان"
 
-#: inc/admin/import-data.php:90
+#: inc/admin/import-data.php:91
 msgid "It is already installed."
 msgstr "قبلاً نصب شده است."
 
@@ -176,8 +176,8 @@ msgstr "قبلاً نصب شده است."
 msgid "Data not found!"
 msgstr "داده‌ها یافت نشد!"
 
-#: inc/admin/settings-template.php:5 inc/admin/settings.php:77
-#: inc/admin/settings.php:78
+#: inc/admin/settings-template.php:5 inc/admin/settings.php:76
+#: inc/admin/settings.php:77
 msgid "Settings"
 msgstr "تنظیمات"
 
@@ -193,19 +193,19 @@ msgstr "وزیر"
 msgid "Vazir(Persian number)"
 msgstr "وزیر(شماره فارسی)"
 
-#: inc/admin/settings-template.php:34
+#: inc/admin/settings-template.php:31
 msgid "Dictionary page"
 msgstr "برگه فرهنگ لغت"
 
-#: inc/admin/settings-template.php:50
+#: inc/admin/settings-template.php:45
 msgid "Word meaning tooltip"
 msgstr "ابزار معنی واژه"
 
-#: inc/admin/settings-template.php:52
+#: inc/admin/settings-template.php:47
 msgid "Active"
 msgstr "فعال‌سازی"
 
-#: inc/admin/settings-template.php:55
+#: inc/admin/settings-template.php:50
 msgid ""
 "By activating this option, the meaning tooltip will be displayed after "
 "selecting the word on the site."
@@ -213,15 +213,15 @@ msgstr ""
 "با فعال کردن این گزینه پس از انتخاب واژه، ابزار نمایش معنی در سایت نمایش "
 "داده خواهد شد."
 
-#: inc/admin/settings-template.php:59
+#: inc/admin/settings-template.php:54
 msgid "Font"
 msgstr "قلم"
 
-#: inc/admin/settings-template.php:76
+#: inc/admin/settings-template.php:71
 msgid "Font size"
 msgstr "اندازه فونت"
 
-#: inc/admin/settings.php:93
+#: inc/admin/settings.php:92
 msgid "Settings saved successfully."
 msgstr "تنظیمات با موفقیت ذخیره شد."
 
@@ -233,36 +233,36 @@ msgstr "لیست واژه‌ها"
 msgid "Words"
 msgstr "واژه‌ها"
 
-#: inc/admin/words-list.php:50 inc/templates/searchbox.php:55
+#: inc/admin/words-list.php:50 inc/templates/searchbox.php:31
 msgid "List of words"
 msgstr "لیست واژه‌ها"
 
-#: inc/admin/words-list.php:56
+#: inc/admin/words-list.php:55
 msgid "Search word"
 msgstr "جستجوی لغت"
 
-#: inc/admin/words-table.php:31
+#: inc/admin/words-table.php:36
 #, php-format
 msgid "%d item(s) were removed."
 msgstr "%d مورد حذف شد."
 
-#: inc/admin/words-table.php:39
+#: inc/admin/words-table.php:44
 msgid "Please select one or more."
 msgstr "لطفاً موردی را انتخاب کنید."
 
-#: inc/admin/words-table.php:51 inc/templates/searchbox.php:85
+#: inc/admin/words-table.php:56 inc/templates/searchbox.php:65
 msgid "Nothing found!"
 msgstr "موردی یافت نشد!"
 
-#: inc/admin/words-table.php:61
+#: inc/admin/words-table.php:64
 msgid "ID"
 msgstr "شناسه"
 
-#: inc/admin/words-table.php:74
+#: inc/admin/words-table.php:77
 msgid "Delete"
 msgstr "حذف"
 
-#: inc/admin/words-table.php:120
+#: inc/admin/words-table.php:143
 msgid "Edit"
 msgstr "ویرایش"
 
@@ -282,31 +282,31 @@ msgstr "اولی"
 msgid "Last"
 msgstr "آخری"
 
-#: inc/functions.php:35
+#: inc/functions.php:39
 msgid "Search for words in the dictionary"
 msgstr "جستجوی واژه در فرهنگ لغت"
 
-#: inc/functions.php:36
+#: inc/functions.php:40
 msgid "Meaning"
 msgstr "معنی"
 
-#: inc/functions.php:63
+#: inc/functions.php:83
 msgid "Installing"
 msgstr "در حال نصب"
 
-#: inc/functions.php:65
+#: inc/functions.php:85
 msgid "Plugin license registration successful."
 msgstr "ثبت لایسنس افزونه با موفقیت انجام شد."
 
-#: inc/functions.php:66
+#: inc/functions.php:86
 msgid "Error: The request failed!"
 msgstr "خطا: درخواست با شکست مواجه شد!"
 
-#: inc/functions.php:67
+#: inc/functions.php:87
 msgid "Error: "
 msgstr "خطا: "
 
-#: inc/functions.php:68
+#: inc/functions.php:88
 msgid "Please enter the activation code!"
 msgstr "لطفا کد فعال سازی را وارد کنید!"
 
@@ -314,36 +314,36 @@ msgstr "لطفا کد فعال سازی را وارد کنید!"
 msgid "Moein dictionary"
 msgstr "فرهنگ معین"
 
-#: inc/templates/description.php:15
+#: inc/templates/description.php:8
 msgid "Print"
 msgstr "چاپ"
 
-#: inc/templates/searchbox.php:29
+#: inc/templates/searchbox.php:6
 msgid "Word search"
 msgstr "جستجوی واژه"
 
-#: inc/templates/searchbox.php:35
+#: inc/templates/searchbox.php:11
 msgid "Enter a word"
 msgstr "واژه مورد نظر را وارد کنید"
 
-#: inc/templates/searchbox.php:40
+#: inc/templates/searchbox.php:16
 msgid "Search in words"
 msgstr "جستجو در واژه‌ها"
 
-#: inc/templates/searchbox.php:41
+#: inc/templates/searchbox.php:17
 msgid "Search in the meaning of words"
 msgstr "جستجو در معنای واژه‌ها"
 
-#: inc/templates/searchbox.php:45
+#: inc/templates/searchbox.php:21
 msgid "Search"
 msgstr "جستجو"
 
-#: inc/templates/searchbox.php:55
+#: inc/templates/searchbox.php:31
 #, php-format
 msgid "Searching for the meaning of %s"
 msgstr "جستجوی معنی %s"
 
-#: inc/templates/searchbox.php:55
+#: inc/templates/searchbox.php:31
 msgid "Total:"
 msgstr "تعداد کل:"
 
@@ -362,6 +362,10 @@ msgstr "ham3da"
 #. Author URI of the plugin/theme
 msgid "https://ham3da.ir"
 msgstr ""
+
+#, php-format
+#~ msgid "Step %d"
+#~ msgstr "مرحله %d"
 
 #~ msgid "License"
 #~ msgstr "لایسنس"

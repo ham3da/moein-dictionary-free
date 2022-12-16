@@ -19,14 +19,15 @@ class MDict_Words_Table extends WP_List_Table
 
         if (($action == 'delete') || ( $action2 == 'delete'))
         {
-            
-            
+
+
             $posted_data = filter_input_array(INPUT_POST);
 
             if (isset($posted_data['id']))
             {
                 $ids = implode(',', $posted_data['id']);
-                $wpdb->query("DELETE FROM $table WHERE `id` IN($ids)");
+
+                $wpdb->query($wpdb->prepare("DELETE FROM `$table` WHERE `id` IN(%s)", $ids));
 
                 $count = count($posted_data['id']);
                 add_action('admin_notices', function () use ($count) {
@@ -85,14 +86,11 @@ class MDict_Words_Table extends WP_List_Table
         $per_page = $this->get_items_per_page('mdict_wl_per_page', 20);
         $current_page = $this->get_pagenum();
 
-        $table_name = $wpdb->prefix . "pn_mdict";
-        $query = "SELECT * FROM $table_name";
-        $s = $_REQUEST["s"] ?? '';
+        $offset = ($current_page - 1) * $per_page;
 
-        if (!empty($s))
-        {
-            $query = "SELECT * FROM `$table_name` Where `Word` LIKE '$s'";
-        }
+        $table_name = $wpdb->prefix . "pn_mdict";
+
+        $s = isset($_REQUEST["s"]) ? sanitize_text_field($_REQUEST["s"]) : '';
 
         $orderby = filter_input(INPUT_GET, 'orderby');
         $orderby = !empty($orderby) ? esc_sql($orderby) : 'id';
@@ -100,33 +98,51 @@ class MDict_Words_Table extends WP_List_Table
         $order = filter_input(INPUT_GET, 'order');
         $order = !empty($order) ? esc_sql($order) : 'ASC';
 
-        if (!empty($orderby) & !empty($order))
+        if (!empty($s))
         {
-            $query .= " ORDER BY  $orderby $order";
+            $s = esc_sql($s);
+
+            $totalitems = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM `$table_name` Where `Word` LIKE '%s'", $s));
+            $totalpages = ceil($totalitems / $per_page);
+
+            if (!empty($orderby) & !empty($order))
+            {
+                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` Where `Word` LIKE '%s' ORDER BY $orderby $order LIMIT $offset, $per_page", $s));
+            }
+            else
+            {
+                $this->items = $wpdb->get_results($wpdb->prepare("SELECT * FROM `$table_name` Where `Word` LIKE '%s' LIMIT $offset, $per_page", $s));
+            }
+        }
+        else
+        {
+            $totalitems = $wpdb->get_var("SELECT COUNT(*) FROM `$table_name`");
+            $totalpages = ceil($totalitems / $per_page);
+            
+            if (!empty($orderby) & !empty($order))
+            {
+                $this->items = $wpdb->get_results("SELECT * FROM `$table_name` ORDER BY $orderby $order LIMIT $offset, $per_page");
+            }
+            else
+            {
+                $this->items = $wpdb->get_results("SELECT * FROM `$table_name` LIMIT $offset, $per_page");
+            }
         }
 
 
-        $totalitems = $wpdb->query($query);
-        $offset = ($current_page - 1) * $per_page;
-        $totalpages = ceil($totalitems / $per_page);
-        $query .= " LIMIT $offset, $per_page";
         $this->set_pagination_args(array(
             "total_items" => $totalitems,
             "total_pages" => $totalpages,
             "per_page" => $per_page,
         ));
-        $this->items = $wpdb->get_results($query);
     }
 
     function column_Word($item) {
 
-
         $actions = array(
-            'edit' => '<a href="' . admin_url('admin.php?page=mdict-add&item_id=' . $item->id) . '">' . __('Edit', 'mdict') . '</a>',
+            'edit' => '<a href="' . esc_url(admin_url('admin.php?page=mdict-add&item_id=' . $item->id)) . '">' . __('Edit', 'mdict') . '</a>',
         );
-
-        $link = '<a href="' . admin_url('admin.php?page=mdict-add&item_id=' . $item->id) . '">' . $item->Word . '</a>';
-
+        $link = '<a href="' . esc_url(admin_url('admin.php?page=mdict-add&item_id=' . $item->id)) . '">' . esc_html($item->Word) . '</a>';
         return sprintf('%1$s %2$s', '<strong>' . $link . '</strong>', $this->row_actions($actions));
     }
 
@@ -135,8 +151,6 @@ class MDict_Words_Table extends WP_List_Table
     }
 
     function column_Description($item) {
-
-
         return mdict_get_excerot($item->Description, 10);
     }
 

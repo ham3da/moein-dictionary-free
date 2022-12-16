@@ -52,7 +52,7 @@ class MDict_Settings
             .mdict a.mdict-word-link,
             .mdict h1.card-header
             {
-                font-size: <?php echo $font_size ?>px;
+            font-size: <?php echo sanitize_text_field($font_size)  ?>px;
             }
         <?php
          return ob_get_clean();
@@ -97,7 +97,7 @@ class MDict_Settings
     function save_func() {
 
         $page = filter_input(INPUT_GET, 'page'); 
-        if ('POST' != $_SERVER['REQUEST_METHOD'] || $page != 'mdict-settings')
+        if ('POST' != sanitize_text_field($_SERVER['REQUEST_METHOD']) || $page != 'mdict-settings')
         {
             return;
         }

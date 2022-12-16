@@ -45,32 +45,35 @@ class MDict_SearchTools
         $offset = ($current_page - 1) * $per_page;
         $where = "";
         $order_by = "`Word` ASC";
-
+        $query_total = 0;
+        $query_res = null;
+        
         if (!empty($word))
         {
             if ($sb == 1)
             {
-                $where .= "Where `Word` LIKE '%$word%'";
-                $order_by = "LOCATE('$word', Word), `Word` ASC";
+                $where .= "Where `Word` LIKE '%s'";
+                $order_by = "LOCATE('%s', Word), `Word` ASC";
+
+                $query_total = $wpdb->prepare("SELECT COUNT(*) FROM `$table` $where", "%$word%");
+                $query_res = $wpdb->prepare("SELECT * FROM `$table` $where ORDER BY $order_by LIMIT $offset , $per_page", "%$word%", $word);
             }
             else
             {
-                if (!empty($where))
-                {
-                    $where .= " AND";
-                }
-                else
-                {
-                    $where .= "Where";
-                }
-                $where .= " `Description` LIKE '%$word%'";
+
+                $where .= "Where `Description` LIKE '%s'";
                 $order_by = "`Word` ASC";
+
+                $query_total = $wpdb->prepare("SELECT COUNT(*) FROM `$table` $where", "%$word%");
+                $query_res = $wpdb->prepare("SELECT * FROM `$table` $where ORDER BY $order_by LIMIT $offset , $per_page", "%$word%");
             }
         }
+        else
+        {
+            $query_total = "SELECT COUNT(*) FROM `$table`";
+            $query_res = "SELECT * FROM `$table` ORDER BY $order_by LIMIT $offset , $per_page";
+        }
 
-
-        $query_total = "SELECT COUNT(*) FROM `$table` $where";
-        $query_res = "SELECT * FROM `$table` $where ORDER BY $order_by LIMIT $offset , $per_page";
 
         $total_items = $wpdb->get_var($query_total);
         $data = $wpdb->get_results($query_res);
@@ -82,7 +85,7 @@ class MDict_SearchTools
         global $wpdb;
         $word = esc_sql($word);
         $table = $wpdb->prefix . "pn_mdict";
-        $query_res = "SELECT `id`, `Word` FROM `$table` WHERE `Word` LIKE '%$word%' ORDER BY LOCATE('$word', Word), `Word` ASC LIMIT 20";
+        $query_res = $wpdb->prepare("SELECT `id`, `Word` FROM `$table` WHERE `Word` LIKE '%s' ORDER BY LOCATE('%s', Word), `Word` ASC LIMIT 20", "%$word%", $word);
         $data = $wpdb->get_results($query_res, ARRAY_A);
         return $data;
     }

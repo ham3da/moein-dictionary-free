@@ -3,7 +3,7 @@ Contributors: ham3da
 Tags: dictionary, moein, moein dictionary, persian dictionary, persian, farsi, persian to persian
 Requires at least: 5.0
 Tested up to: 6.1.1
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -35,8 +35,11 @@ Major features in Moein Dictionary include:
 3. Use the `[mdict_search]` shortcode to display the dictionary search engine on your desired page or template.
 
 == Changelog ==
-= 1.4.0 =
 
+= 1.4.1 =
+* Optimization and cleaning
+
+= 1.4.0 =
 * Redesign of the dictionary search form
 
 = 1.3.0 =

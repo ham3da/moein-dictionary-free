@@ -1,12 +1,9 @@
 <div class="bootstrap-iso rtl mdict">
     <div class="col-12">
         <div class="grid-view">
-
             <div class="card mb-2">
-
                 <div class="card-body pb-0">
                     <div class="card-title text-center border-bottom"><?php _e('Word search', 'mdict'); ?></div> 
-
                     <form method="get" class="pt-1 pb-1 mb-1">
                         <div class="form-row centered">
                             <div class="form-group col-md-6">
@@ -31,7 +28,7 @@
 
             <div class="card mb-2">
                 <h1 class="card-header h6">
-                    <?php echo $word_w ? sprintf(__('Searching for the meaning of %s', 'mdict'), '<b>' . $word_w . '</b>') : __('List of words', 'mdict'); ?> <span class="float-left">(<?php _e('Total:', 'mdict'); ?> <?php echo number_format($total) ?>)</span>
+                    <?php $word_w ? printf(__('Searching for the meaning of %s', 'mdict'), '<b>' . $word_w . '</b>') : _e('List of words', 'mdict'); ?> <span class="float-left">(<?php _e('Total:', 'mdict'); ?> <?php echo number_format_i18n($total) ?>)</span>
                 </h1> 
                 <div class="card-body p-4 words-items">
                     <?php
@@ -46,23 +43,27 @@
                             $word_url = add_query_arg(array('wid' => $word_item->id), $current_page_url);
                             ?>
                             <div class="border-bottom p-2">
-                                <h2 class="font-weight-bold h6"><a class="mdict-word-link" href="<?php echo $word_url ?>"><?php echo $word_item->Word ?></a></h2> 
+                                <h2 class="font-weight-bold h6"><a class="mdict-word-link" href="<?php echo esc_url($word_url) ?>"><?php echo esc_html($word_item->Word) ?></a></h2> 
                                 <div class="detail">
                                     <?php
                                     $des = mdict_get_excerot($word_item->Description);
-                                    echo wpautop($des);
+                                    echo wp_kses( wpautop($des), 'post');
                                     ?>
                                 </div> 
                             </div>
                             <?php
                         }
-
-                        echo '<br>';
-                        echo mdict_pagination($total, MDict_SearchTools::get_pagenum(), MDict_SearchTools::get_perpage());
+                        ?>
+                        <br>
+                        <?php
+                        $pg = mdict_pagination($total, MDict_SearchTools::get_pagenum(), MDict_SearchTools::get_perpage());
+                        echo wp_kses($pg, 'post');
                     }
                     else
                     {
-                        echo '<p>' . __('Nothing found!', 'mdict') . '</p>';
+                        ?>
+                        <p><?php _e('Nothing found!', 'mdict'); ?></p>
+                        <?php
                     }
                     ?>
                 </div>

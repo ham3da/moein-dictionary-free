@@ -31,27 +31,25 @@ class MDict_Ajax
     }
     
     public static function import_data() {
-        $data_file = $_POST['data_file'] ?? null;
+        
+        $data_file = filter_input(INPUT_POST, 'data_file');
         if (!$data_file)
         {
             return false;
         }
-
         $res = MDict_Import_Data::import($data_file);
-        echo wp_send_json($res);
-        wp_die();
+        wp_send_json($res);
     }
 
     public static function search_word() {
 
-        $word = $_POST['word'] ?? null;
+        $word =  filter_input(INPUT_POST, 'word');
         if (!$word)
         {
             return false;
         }
         $result = MDict_SearchTools::search_ajax($word);
-        echo wp_send_json(array('res' => 1, 'data' => $result));
-        wp_die();
+        wp_send_json(array('res' => 1, 'data' => $result));
     }
 
 }

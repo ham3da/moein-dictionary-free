@@ -50,7 +50,11 @@ class MDict_Word_Add
             <div class="mdict-lower">
 
                 <div class="mdict-alert mdict-critical mdict-text-center">
-                    <h3 class="mdict-key-status failed"><?php echo __('Moein Dictionary', 'mdict') . __(' » ', 'mdict') . $title ?></h3>
+                    <h3 class="mdict-key-status failed"><?php
+                        _e('Moein Dictionary', 'mdict');
+                        _e(' » ', 'mdict');
+                        echo esc_html($title)
+                        ?></h3>
                     <p class="mdict-description">
 
                     </p>
@@ -59,18 +63,17 @@ class MDict_Word_Add
                 <div class="mdict-boxes">
                     <div class="mdict-box">
                         <form method="post">
-                            <input type="hidden" name="item_id" value="<?php echo $item_id ?>">
+                            <input type="hidden" name="item_id" value="<?php echo esc_attr($item_id) ?>">
                             <div class="wrap">
                                 <table class="form-table" role="presentation">
                                     <tr>
                                         <th scope="row"><label for="word"><?php _e('Word', 'mdict'); ?></label></th>
-                                        <td><input name="word" type="text" id="word" value="<?php echo $word ?>" class="regular-text"></td>
+                                        <td><input name="word" type="text" id="word" value="<?php echo sanitize_text_field($word)?>" class="regular-text"></td>
                                     </tr> 
                                     <tr>
                                         <th scope="row"><label for="description"><?php _e('Description', 'mdict'); ?></label></th>
                                         <td>
-                                            <textarea class="regular-text" id="description" name="description" rows="5" cols="10"><?php echo $des ?></textarea>
-
+                                            <textarea class="regular-text" id="description" name="description" rows="5" cols="10"><?php echo esc_textarea($des) ?></textarea>
                                         </td>
                                     </tr> 
                                 </table>
@@ -145,7 +148,7 @@ class MDict_Word_Add
             $data_id = $wpdb->insert_id;
             do_action('mdict_word_add', $data_id, $data_array);
 
-            $url = admin_url('admin.php?page=mdict-add&item_id=' . $data_id);
+            $url = esc_url(admin_url('admin.php?page=mdict-add&item_id=' . $data_id));
             wp_redirect($url);
             exit();
         }

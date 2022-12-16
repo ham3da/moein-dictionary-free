@@ -2,7 +2,7 @@
     <div class="mdict-lower">
 
         <div class="mdict-alert mdict-critical mdict-text-center">
-            <h3 class="mdict-key-status failed"><?php echo __('Moein Dictionary', 'mdict') . __(' » ', 'mdict') . __('Settings', 'mdict') ?></h3>
+            <h3 class="mdict-key-status failed"><?php _e('Moein Dictionary', 'mdict'); _e(' » ', 'mdict'); _e('Settings', 'mdict') ?></h3>
             <p class="mdict-description">
 
             </p>
@@ -59,7 +59,7 @@
                                         foreach ($font_options as $key => $value)
                                         {
                                             ?>
-                                            <option <?php selected($font_saved, $key) ?> value="<?php echo $key ?>" ><?php echo $value ?></option>
+                                        <option <?php selected($font_saved, $key) ?> value="<?php echo esc_attr($key) ?>" ><?php echo esc_html($value) ?></option>
                                             <?php
                                         }
                                         ?>
@@ -70,7 +70,7 @@
                             <tr>
                                 <th scope="row"><label for="font_size"><?php _e('Font size', 'mdict'); ?></label></th>
 
-                                <td><input name="font_size" type="number" id="font_size" value="<?php echo $font_size ?>" class="small-text"> px</td>
+                                <td><input name="font_size" type="number" id="font_size" value="<?php echo sanitize_text_field($font_size) ?>" class="small-text"> px</td>
 
                             </tr> 
                         </table>

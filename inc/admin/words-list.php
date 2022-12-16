@@ -48,7 +48,7 @@ class MDict_Words_List
         ?>
         <div class="wrap mdict">
             <h1 class="wp-heading-inline"><?php _e('List of words', 'mdict'); ?></h1>
-            <a href="<?php echo admin_url('admin.php?page=mdict-add') ?>" class="page-title-action"><?php _e('Add Word', 'mdict') ?></a>
+            <a href="<?php echo esc_url(admin_url('admin.php?page=mdict-add')) ?>" class="page-title-action"><?php _e('Add Word', 'mdict') ?></a>
             <hr class="wp-header-end">
             <form method="post" action="">
                 <?php

@@ -22,7 +22,7 @@ class MDict_Import_Data
             if ($w_count < MDict_SearchTools::get_check_count())
             {
                 $class = 'notice notice-error';
-                $message = __('Moein Dictionary data is not fully installed.', 'mdict') . ' 🔔 <a href="' . admin_url('admin.php?page=mdict-data-intall') . '">' . __('Install the data', 'mdict') . '</a>';
+                $message = __('Moein Dictionary data is not fully installed.', 'mdict') . ' 🔔 <a href="' . esc_url(admin_url('admin.php?page=mdict-data-intall')) . '">' . __('Install the data', 'mdict') . '</a>';
                 printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), $message);
             }
         }
@@ -106,8 +106,7 @@ class MDict_Import_Data
 
             if (mysqli_connect_errno())
             {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                exit();
+                die( "Failed to connect to MySQL: " . mysqli_connect_error());
             }
 
             $utf8 = mysqli_set_charset($con, "utf8");
