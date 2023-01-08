@@ -68,7 +68,7 @@ class MDict_Word_Add
                                 <table class="form-table" role="presentation">
                                     <tr>
                                         <th scope="row"><label for="word"><?php _e('Word', 'mdict'); ?></label></th>
-                                        <td><input name="word" type="text" id="word" value="<?php echo sanitize_text_field($word)?>" class="regular-text"></td>
+                                        <td><input name="word" type="text" id="word" value="<?php echo sanitize_text_field($word) ?>" class="regular-text"></td>
                                     </tr> 
                                     <tr>
                                         <th scope="row"><label for="description"><?php _e('Description', 'mdict'); ?></label></th>
@@ -148,8 +148,8 @@ class MDict_Word_Add
             $data_id = $wpdb->insert_id;
             do_action('mdict_word_add', $data_id, $data_array);
 
-            $url = esc_url(admin_url('admin.php?page=mdict-add&item_id=' . $data_id));
-            wp_redirect($url);
+            $url = add_query_arg(array('page' => 'mdict-add', 'item_id' => $data_id,), admin_url('admin.php'));
+            wp_redirect(esc_url_raw($url));
             exit();
         }
     }
