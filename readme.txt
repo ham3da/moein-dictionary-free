@@ -35,6 +35,10 @@ Major features in Moein Dictionary include:
 3. Use the `[mdict_search]` shortcode to display the dictionary search engine on your desired page or template.
 
 == Changelog ==
+= 1.5.0 =
+* Optimizing the word meaning search tool
+* Minor changes
+
 = 1.4.2 =
 * Optimizing data import
 
