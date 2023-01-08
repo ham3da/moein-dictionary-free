@@ -27,7 +27,7 @@ $w_count = MDict_SearchTools::get_wors_count();
                             }
                             ?>
                         </li>
-                        <li>✔ <?php printf(__('Version: %s', 'mdict'), MDC_PLUGIN_VERSION) . ' - ' . __('free version', 'mdict'); ?></li>
+                        <li>✔ <?php printf(__('Version: %s', 'mdict'), MDC_PLUGIN_VERSION . ' - ' . __('free version', 'mdict')); ?></li>
 
                     </ul>
 
