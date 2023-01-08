@@ -52,7 +52,7 @@ class MDict_Import_Data
 
     public static function generate_wpdb_prepare($array) {
         $placeholders = array_map(function ($item) {
-            return is_numeric($item) ? '%f' : ( is_float($item) ? '%f' : (  is_string($item) ? '%s' : '' ) );
+            return is_numeric($item) ? '%f' : ( is_float($item) ? '%f' : ( is_string($item) ? '%s' : '' ) );
         }, $array);
         return '(' . join(',', $placeholders) . ')';
     }
@@ -79,7 +79,7 @@ class MDict_Import_Data
             $items = explode(",", $ids);
             $in_str = self::generate_wpdb_prepare($items);
             $sql = "SELECT COUNT(*) FROM $table WHERE `id` IN {$in_str}";
-           // print_r($wpdb->prepare($sql, $items));
+            // print_r($wpdb->prepare($sql, $items));
             $res = $wpdb->get_var($wpdb->prepare($sql, $items));
             return $res == 2;
         }
@@ -111,36 +111,47 @@ class MDict_Import_Data
             {
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
             }
-
             $con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
+            
             if (mysqli_connect_errno())
             {
-                die("Failed to connect to MySQL: " . mysqli_connect_error());
+                //die("Failed to connect to MySQL: " . mysqli_connect_error());
+                $error = "Failed to connect to MySQL!";
+                $result = 0;
+                return ['result' => 0, 'last_index' => 0, 'error' => $error];
             }
-
-            $utf8 = mysqli_set_charset($con, "utf8");
-            $last_index = 0;
-
-            // Run the SQL
-            if (mysqli_multi_query($con, $sql_queries))
+            
+            try
             {
-                do
+                $utf8 = mysqli_set_charset($con, "utf8");
+                $last_index = 0;
+                // Run the SQL
+                if (mysqli_multi_query($con, $sql_queries))
                 {
-                    mysqli_next_result($con);
-                    $last_index++;
+                    do
+                    {
+                        mysqli_next_result($con);
+                        $last_index++;
+                    }
+                    while (mysqli_more_results($con));
                 }
-                while (mysqli_more_results($con));
-            }
 
-            $error = "";
-            $result = 1;
-            if (mysqli_errno($con))
+                $error = "";
+                $result = 1;
+                if (mysqli_errno($con))
+                {
+                    $error = mysqli_error($con);
+                    $result = 0;
+                }
+            }
+            catch (mysqli_sql_exception $ex)
             {
-                $error = mysqli_error($con);
+                $error = $ex->getMessage();
                 $result = 0;
             }
 
+            mysqli_close($con);
+            
             return ['result' => $result, 'last_index' => $last_index, 'error' => $error];
         }
         else
