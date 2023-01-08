@@ -2,7 +2,7 @@
 /*
   Plugin Name: Moein Dictionary(free)
   Description: Moein Persian dictionary(free version)
-  Version: 1.4.2
+  Version: 1.5.0
   Author: ham3da
   Plugin URI: https://wordpress.org/plugins/moein-dictionary-free
   Author URI: https://ham3da.ir
@@ -17,7 +17,7 @@ if (!defined('ABSPATH'))
     die("Access denied!");
 }
 
-define('MDC_PLUGIN_VERSION', '1.4.2');
+define('MDC_PLUGIN_VERSION', '1.5.0');
 define('MDC_PLUGIN_FILE', __FILE__);
 define('MDC_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MDC_PLUGIN_URL', plugin_dir_url(__FILE__));
