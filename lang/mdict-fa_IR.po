@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Moein Dictionary\n"
-"POT-Creation-Date: 2022-12-16 15:04+0330\n"
-"PO-Revision-Date: 2022-12-16 15:04+0330\n"
+"POT-Creation-Date: 2023-01-08 23:00+0330\n"
+"PO-Revision-Date: 2023-01-08 23:01+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -46,11 +46,11 @@ msgid " » "
 msgstr ""
 
 #: inc/admin/add-word.php:70 inc/admin/words-table.php:9
-#: inc/admin/words-table.php:62
+#: inc/admin/words-table.php:64
 msgid "Word"
 msgstr "واژه"
 
-#: inc/admin/add-word.php:74 inc/admin/words-table.php:63
+#: inc/admin/add-word.php:74 inc/admin/words-table.php:65
 msgid "Description"
 msgstr "شرح"
 
@@ -168,11 +168,11 @@ msgstr "داده‌های فرهنگ لغت معین به طور کامل نصب
 msgid "Dashboard"
 msgstr "پیشخوان"
 
-#: inc/admin/import-data.php:91
+#: inc/admin/import-data.php:101
 msgid "It is already installed."
 msgstr "قبلاً نصب شده است."
 
-#: inc/admin/import-data.php:138
+#: inc/admin/import-data.php:159
 msgid "Data not found!"
 msgstr "داده‌ها یافت نشد!"
 
@@ -241,28 +241,28 @@ msgstr "لیست واژه‌ها"
 msgid "Search word"
 msgstr "جستجوی لغت"
 
-#: inc/admin/words-table.php:36
+#: inc/admin/words-table.php:38
 #, php-format
 msgid "%d item(s) were removed."
 msgstr "%d مورد حذف شد."
 
-#: inc/admin/words-table.php:44
+#: inc/admin/words-table.php:46
 msgid "Please select one or more."
 msgstr "لطفاً موردی را انتخاب کنید."
 
-#: inc/admin/words-table.php:56 inc/templates/searchbox.php:65
+#: inc/admin/words-table.php:58 inc/templates/searchbox.php:65
 msgid "Nothing found!"
 msgstr "موردی یافت نشد!"
 
-#: inc/admin/words-table.php:64
+#: inc/admin/words-table.php:66
 msgid "ID"
 msgstr "شناسه"
 
-#: inc/admin/words-table.php:77
+#: inc/admin/words-table.php:79
 msgid "Delete"
 msgstr "حذف"
 
-#: inc/admin/words-table.php:143
+#: inc/admin/words-table.php:147
 msgid "Edit"
 msgstr "ویرایش"
 
