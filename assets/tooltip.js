@@ -59,7 +59,6 @@ jQuery(function ($)
             transform: 'scale(1)',
             transition: 'transform 0.2s ease-out',
             top: rect.top + $(window).scrollTop(),
-            marginTop: '2.3em',
             left: rect.right - tooltipWidth
         });
         prevtext = text;

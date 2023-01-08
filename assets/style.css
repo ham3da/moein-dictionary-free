@@ -68,11 +68,17 @@ a.mdict-print {
     overflow: hidden;
     display: block;
 }
+.mdict-tooltip
+{
+    margin-top: 2.3em;
+}
 
 .mdict-tooltip a
 {
     color: #fff;
     font-family: "Vazirmatn", sans-serif;
+    height: 2.5em;
+    padding: 5px;
 }
 
 .mdict-tooltip a:hover
@@ -103,6 +109,11 @@ a.mdict-print {
     {
         display: block;
         width: 100%;
+    }
+
+    .mdict-tooltip
+    {
+        margin-top: 3.4em;
     }
 }
 
