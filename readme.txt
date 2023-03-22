@@ -35,7 +35,7 @@ Major features in Moein Dictionary include:
 3. Use the `[mdict_search]` shortcode to display the dictionary search engine on your desired page or template.
 
 == Pro version ==
-The free version has 19,827 words, but the pro version has 36,000 words. [Go to Pro version](https://www.zhaket.com/web/moien-farhang-plugin)
+The free version has 19,827 words. But the Pro version has more than 36,000 words. [Go to Pro version](https://www.zhaket.com/web/moien-farhang-plugin)
 
 == Changelog ==
 = 1.5.0 =

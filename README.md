@@ -23,4 +23,4 @@ Moein Persian dictionary for WordPress (free version).
 * [Bootstrap Isolated](https://github.com/x3rud/bootstrap-iso)
 
 ## Pro version
-The free version has 19,827 words, but the pro version has 36,000 words. [Go to Pro version](https://www.zhaket.com/web/moien-farhang-plugin)
+The free version has 19,827 words. But the Pro version has more than 36,000 words. [Go to Pro version](https://www.zhaket.com/web/moien-farhang-plugin)
