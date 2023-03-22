@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Moein Dictionary\n"
-"POT-Creation-Date: 2023-01-08 23:00+0330\n"
-"PO-Revision-Date: 2023-01-08 23:01+0330\n"
+"POT-Creation-Date: 2023-03-22 15:00+0330\n"
+"PO-Revision-Date: 2023-03-22 15:00+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -314,7 +314,7 @@ msgstr "لطفا کد فعال سازی را وارد کنید!"
 msgid "Moein dictionary"
 msgstr "فرهنگ معین"
 
-#: inc/templates/description.php:8
+#: inc/templates/description.php:17
 msgid "Print"
 msgstr "چاپ"
 
