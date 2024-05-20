@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Moein Dictionary(free)\n"
-"POT-Creation-Date: 2023-03-22 18:00+0330\n"
-"PO-Revision-Date: 2023-03-22 18:04+0330\n"
+"POT-Creation-Date: 2023-03-22 18:12+0330\n"
+"PO-Revision-Date: 2023-03-22 18:18+0330\n"
 "Last-Translator: \n"
 "Language-Team: ham3da.j@gmail.com\n"
 "Language: fa_IR\n"
@@ -23,60 +23,60 @@ msgstr ""
 
 #: inc/admin/add-word.php:19
 msgid "Add/Edit Word"
-msgstr "افزودن/ویرایش واژه"
+msgstr "إضافة / تحرير كلمة"
 
 #: inc/admin/add-word.php:20 inc/admin/add-word.php:45
 #: inc/admin/words-list.php:51
 msgid "Add Word"
-msgstr "افزودن واژه"
+msgstr "أضف كلمة"
 
 #: inc/admin/add-word.php:38
 msgid "Edit Word"
-msgstr "ویرایش واژه"
+msgstr "تحرير كلمة"
 
 #: inc/admin/add-word.php:54 inc/admin/dashboard.php:18
 #: inc/admin/dashboard.php:19 inc/admin/data-template.php:4
 #: inc/admin/settings-template.php:5
 msgid "Moein Dictionary"
-msgstr "فرهنگ معین"
+msgstr "قاموس معين"
 
 #: inc/admin/add-word.php:55 inc/admin/data-template.php:4
 #: inc/admin/settings-template.php:5
 msgid " » "
-msgstr ""
+msgstr " » "
 
 #: inc/admin/add-word.php:70 inc/admin/words-table.php:9
 #: inc/admin/words-table.php:64
 msgid "Word"
-msgstr "واژه"
+msgstr "كلمة"
 
 #: inc/admin/add-word.php:74 inc/admin/words-table.php:65
 msgid "Description"
-msgstr "شرح"
+msgstr "وصف"
 
 #: inc/admin/add-word.php:81 inc/admin/settings-template.php:78
 msgid "Save"
-msgstr "ذخیره"
+msgstr "حفظ"
 
 #: inc/admin/add-word.php:96
 msgid "The word must not be empty!"
-msgstr "واژه نباید خالی باشد!"
+msgstr "يجب ألا تكون الكلمة فارغة!"
 
 #: inc/admin/add-word.php:114 inc/admin/settings.php:106
 msgid "You do not have permission to access this section!"
-msgstr "شما مجوز دسترسی به این بخش را ندارید!"
+msgstr "ليس لديك إذن للوصول إلى هذا القسم!"
 
 #: inc/admin/add-word.php:114 inc/admin/settings.php:106
 msgid "Error!"
-msgstr "خطا!"
+msgstr "خطأ!"
 
 #: inc/admin/dashboard-template.php:8
 msgid "Moein Persian dictionary"
-msgstr "فرهنگ لغت فارسی معین"
+msgstr "معين القاموس الفارسي"
 
 #: inc/admin/dashboard-template.php:17
 msgid "About the plugin"
-msgstr "درباره افزونه"
+msgstr "حول الإضافة"
 
 #: inc/admin/dashboard-template.php:21
 #, php-format
@@ -86,62 +86,61 @@ msgstr "نام: %s"
 #. Plugin Name of the plugin/theme
 #: inc/admin/dashboard-template.php:21
 msgid "Moein Dictionary(free)"
-msgstr "فرهنگ معین(رایگان)"
+msgstr "قاموس معين(مجاني)"
 
 #: inc/admin/dashboard-template.php:23
 #, php-format
 msgid "Number of available words: %s"
-msgstr "تعداد واژه‌های موجود: %s"
+msgstr "عدد الكلمات المتوفرة: %s"
 
 #: inc/admin/dashboard-template.php:26 inc/admin/import-data.php:25
 msgid "Install the data"
-msgstr "داده‌ها را نصب کنید"
+msgstr "قم بتثبيت البيانات"
 
 #: inc/admin/dashboard-template.php:30
 #, php-format
 msgid "Version: %s"
-msgstr "نگارش: %s"
+msgstr "نسخة %s"
 
 #: inc/admin/dashboard-template.php:30
 msgid "free version"
-msgstr "نگارش رایگان"
+msgstr "نسخة مجانية"
 
 #: inc/admin/dashboard-template.php:35
 msgid "User manual:"
-msgstr "راهنمای استفاده:"
+msgstr "دليل الاستخدام:"
 
 #: inc/admin/dashboard-template.php:37
 msgid ""
 "Use the <b>mdict_search</b> shortcode to display the dictionary search "
 "engine."
-msgstr ""
-"برای نمایش جستجوگر لغت‌نامه از کد کوتاه <b>mdict_search</b> استفاده کنید."
+msgstr "استخدم الكود المختصر <b>mdict_search</b> لعرض محرك بحث القاموس."
 
 #: inc/admin/dashboard-template.php:38
 msgid "Sample:"
-msgstr "مثال:"
+msgstr "نموذج:"
 
 #: inc/admin/dashboard-template.php:42
 msgid "Using the shortcode in the content of the pages:"
-msgstr "از کد کوتاه زیر داخل محتوای برگه‌ها استفاده کنید:"
+msgstr "استخدام الكود المختصر في محتوى الصفحات:"
 
 #: inc/admin/dashboard-template.php:45
 msgid "You can also use shortcode inside php codes:"
-msgstr "همچنین می‌توانید از کد کوتاه زیر درون کدهای php استفاده کنید:"
+msgstr "يمكنك أيضًا استخدام کود قصير داخل أكواد php:"
 
 #: inc/admin/data-template.php:4 inc/admin/import-data.php:35
 #: inc/admin/import-data.php:36
 msgid "Data installation"
-msgstr "نصب داده‌ها"
+msgstr "تثبيت البيانات"
 
 #: inc/admin/data-template.php:21
 #, php-format
 msgid "Part %d"
-msgstr "قسمت %d"
+msgstr "الجزء %d"
 
 #: inc/admin/data-template.php:27 inc/functions.php:82
 msgid "Installed"
-msgstr "نصب شده"
+msgstr "المثبتة"
 
 #: inc/admin/data-template.php:27 inc/functions.php:84
 msgid "Install"
@@ -149,114 +148,114 @@ msgstr "نصب"
 
 #: inc/admin/data-template.php:34
 msgid "Please be patient. This may take a minute or more."
-msgstr "لطفاً صبور باشید. ممکن است یک یا چند دقیقه طول بکشد."
+msgstr "يرجى التحلي بالصبر. قد يستغرق هذا دقيقة أو أكثر."
 
 #: inc/admin/data-template.php:42
 msgid "Go to commercial version"
-msgstr "برو به نسخه تجاری"
+msgstr "اذهب إلى النسخة التجارية"
 
 #: inc/admin/data-template.php:43
 #, php-format
 msgid "This part is only available on the commercial version. %s"
-msgstr "این قسمت فقط بر روی نسخه تجاری در دسترس است. %s"
+msgstr "هذا الجزء متاح فقط في النسخة التجارية. %s"
 
 #: inc/admin/import-data.php:25
 msgid "Moein Dictionary data is not fully installed."
-msgstr "داده‌های فرهنگ لغت معین به طور کامل نصب نشده است."
+msgstr "لم يتم تثبيت بيانات قاموس معين بالكامل."
 
 #: inc/admin/import-data.php:44
 msgid "Dashboard"
-msgstr "پیشخوان"
+msgstr "لوحة القيادة"
 
 #: inc/admin/import-data.php:101
 msgid "It is already installed."
-msgstr "قبلاً نصب شده است."
+msgstr "تم تثبيته بالفعل."
 
 #: inc/admin/import-data.php:159
 msgid "Data not found!"
-msgstr "داده‌ها یافت نشد!"
+msgstr "لم يتم العثور على بيانات!"
 
 #: inc/admin/settings-template.php:5 inc/admin/settings.php:76
 #: inc/admin/settings.php:77
 msgid "Settings"
-msgstr "تنظیمات"
+msgstr "إعدادات"
 
 #: inc/admin/settings-template.php:19
 msgid "Inherit"
-msgstr "ارث‌بری"
+msgstr "توريث"
 
 #: inc/admin/settings-template.php:20
 msgid "Vazir"
-msgstr "وزیر"
+msgstr "وزير"
 
 #: inc/admin/settings-template.php:21
 msgid "Vazir(Persian number)"
-msgstr "وزیر(شماره فارسی)"
+msgstr "وزير (رقم فارسي)"
 
 #: inc/admin/settings-template.php:31
 msgid "Dictionary page"
-msgstr "برگه فرهنگ لغت"
+msgstr "صفحة القاموس"
 
 #: inc/admin/settings-template.php:45
 msgid "Word meaning tooltip"
-msgstr "ابزار معنی واژه"
+msgstr "تلميح معنى الكلمة"
 
 #: inc/admin/settings-template.php:47
 msgid "Active"
-msgstr "فعال‌سازی"
+msgstr "التنشيط"
 
 #: inc/admin/settings-template.php:50
 msgid ""
 "By activating this option, the meaning tooltip will be displayed after "
 "selecting the word on the site."
 msgstr ""
-"با فعال کردن این گزینه پس از انتخاب واژه، ابزار نمایش معنی در سایت نمایش "
-"داده خواهد شد."
+"من خلال تفعيل هذا الخيار ، سيتم عرض تلميح المعنى بعد اختيار الكلمة على "
+"الموقع."
 
 #: inc/admin/settings-template.php:54
 msgid "Font"
-msgstr "قلم"
+msgstr "خط"
 
 #: inc/admin/settings-template.php:71
 msgid "Font size"
-msgstr "اندازه فونت"
+msgstr "حجم الخط"
 
 #: inc/admin/settings.php:92
 msgid "Settings saved successfully."
-msgstr "تنظیمات با موفقیت ذخیره شد."
+msgstr "تم حفظ الإعدادات بنجاح."
 
 #: inc/admin/words-list.php:20 inc/admin/words-list.php:21
 msgid "Words List"
-msgstr "لیست واژه‌ها"
+msgstr "قائمة الكلمات"
 
 #: inc/admin/words-list.php:35 inc/admin/words-table.php:10
 msgid "Words"
-msgstr "واژه‌ها"
+msgstr "الكلمات"
 
 #: inc/admin/words-list.php:50 inc/templates/searchbox.php:31
 msgid "List of words"
-msgstr "لیست واژه‌ها"
+msgstr "قائمة الكلمات"
 
 #: inc/admin/words-list.php:55
 msgid "Search word"
-msgstr "جستجوی لغت"
+msgstr "كلمة البحث"
 
 #: inc/admin/words-table.php:38
 #, php-format
 msgid "%d item(s) were removed."
-msgstr "%d مورد حذف شد."
+msgstr "تمت إزالة %d عناصر."
 
 #: inc/admin/words-table.php:46
 msgid "Please select one or more."
-msgstr "لطفاً موردی را انتخاب کنید."
+msgstr "الرجاء تحديد واحد أو أكثر."
 
 #: inc/admin/words-table.php:58 inc/templates/searchbox.php:65
 msgid "Nothing found!"
-msgstr "موردی یافت نشد!"
+msgstr "لم يتم العثور على نتائج!"
 
 #: inc/admin/words-table.php:66
 msgid "ID"
-msgstr "شناسه"
+msgstr "المعرف"
 
 #: inc/admin/words-table.php:79
 msgid "Delete"
@@ -264,7 +263,7 @@ msgstr "حذف"
 
 #: inc/admin/words-table.php:147
 msgid "Edit"
-msgstr "ویرایش"
+msgstr "يحرر"
 
 #: inc/functions.php:13
 msgid "&laquo;"
@@ -276,84 +275,84 @@ msgstr "&raquo;"
 
 #: inc/functions.php:15
 msgid "First"
-msgstr "اولی"
+msgstr "أول"
 
 #: inc/functions.php:16
 msgid "Last"
-msgstr "آخری"
+msgstr "آخر"
 
 #: inc/functions.php:39
 msgid "Search for words in the dictionary"
-msgstr "جستجوی واژه در فرهنگ لغت"
+msgstr "ابحث عن كلمات في القاموس"
 
 #: inc/functions.php:40
 msgid "Meaning"
-msgstr "معنی"
+msgstr "معنى"
 
 #: inc/functions.php:83
 msgid "Installing"
-msgstr "در حال نصب"
+msgstr "التثبيت"
 
 #: inc/functions.php:85
 msgid "Plugin license registration successful."
-msgstr "ثبت لایسنس افزونه با موفقیت انجام شد."
+msgstr "تم تسجيل ترخيص البرنامج المساعد بنجاح."
 
 #: inc/functions.php:86
 msgid "Error: The request failed!"
-msgstr "خطا: درخواست با شکست مواجه شد!"
+msgstr "خطأ: فشل الطلب!"
 
 #: inc/functions.php:87
 msgid "Error: "
-msgstr "خطا: "
+msgstr "خطأ: "
 
 #: inc/functions.php:88
 msgid "Please enter the activation code!"
-msgstr "لطفا کد فعال سازی را وارد کنید!"
+msgstr "الرجاء إدخال رمز التفعيل!"
 
 #: inc/install.php:20
 msgid "Moein dictionary"
-msgstr "فرهنگ معین"
+msgstr "قاموس معين"
 
 #: inc/templates/description.php:17
 msgid "Print"
-msgstr "چاپ"
+msgstr "اطبع"
 
 #: inc/templates/searchbox.php:6
 msgid "Word search"
-msgstr "جستجوی واژه"
+msgstr "بحث كلمة"
 
 #: inc/templates/searchbox.php:11
 msgid "Enter a word"
-msgstr "واژه مورد نظر را وارد کنید"
+msgstr "أدخل كلمة"
 
 #: inc/templates/searchbox.php:16
 msgid "Search in words"
-msgstr "جستجو در واژه‌ها"
+msgstr "البحث في الكلمات"
 
 #: inc/templates/searchbox.php:17
 msgid "Search in the meaning of words"
-msgstr "جستجو در معنای واژه‌ها"
+msgstr "ابحث في معنى الكلمات"
 
 #: inc/templates/searchbox.php:21
 msgid "Search"
-msgstr "جستجو"
+msgstr "بحث"
 
 #: inc/templates/searchbox.php:31
 #, php-format
 msgid "Searching for the meaning of %s"
-msgstr "جستجوی معنی %s"
+msgstr "البحث عن معنى %s"
 
 #: inc/templates/searchbox.php:31
 msgid "Total:"
-msgstr "تعداد کل:"
+msgstr "المجموع:"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wordpress.org/plugins/moein-dictionary-free"
-msgstr ""
+msgstr "https://wordpress.org/plugins/moein-dictionary-free"
 
 #. Description of the plugin/theme
 msgid "Moein Persian dictionary(free version)"
-msgstr "فرهنگ لغت فارسی معین(نگارش رایگان)"
+msgstr "قاموس معين الفارسي (نسخة مجانية)"
 
 #. Author of the plugin/theme
 msgid "ham3da"
@@ -361,77 +360,4 @@ msgstr "ham3da"
 
 #. Author URI of the plugin/theme
 msgid "https://ham3da.ir"
-msgstr ""
-
-#, php-format
-#~ msgid "Step %d"
-#~ msgstr "مرحله %d"
-
-#~ msgid "License"
-#~ msgstr "لایسنس"
-
-#~ msgid "Error checking license status!"
-#~ msgstr "خطا در بررسی وضعیت لایسنس!"
-
-#~ msgid "License Registration"
-#~ msgstr "ثبت لایسنس"
-
-#~ msgid "Status:"
-#~ msgstr "وضعیت:"
-
-#~ msgid "Congratulations! This plugin is active."
-#~ msgstr "تبریک می‌گوییم! این افزونه فعال‌سازی شده است."
-
-#~ msgid "This plugin requires a license to use it."
-#~ msgstr "برای استفاده از این پلاگین باید لایسنس آن را ثبت کنید."
-
-#~ msgid "Help: "
-#~ msgstr "راهنما: "
-
-#, php-format
-#~ msgid ""
-#~ "After purchasing this product on %s, a license key has been assigned to "
-#~ "your order, which you can view in your user panel."
-#~ msgstr ""
-#~ "بعد از خرید این محصول از %s، یک کلید لایسنس به سفارش شما اختصاص داده شده "
-#~ "است که می‌توانید آن را در پنل کاربری خود مشاهده کنید."
-
-#~ msgid "License:"
-#~ msgstr "لایسنس:"
-
-#~ msgid "Submit"
-#~ msgstr "ثبت"
-
-#, php-format
-#~ msgid "To complete the activation of the %s plugin, please %s."
-#~ msgstr "برای تکمیل فعالسازی افزونه %s، لطفاً %s."
-
-#~ msgid "register the plugin license"
-#~ msgstr "لایسنس افزونه را ثبت کنید"
-
-#~ msgid ""
-#~ "The license of Moin dictionary plugin is not registered. Please register "
-#~ "the plugin license."
-#~ msgstr ""
-#~ "لایسنس افزونه فرهنگ معین ثبت نشده است. لطفاً لایسنس افزونه را ثبت کنید."
-
-#~ msgid "Javad Ahshamian"
-#~ msgstr "جواد احشامیان"
-
-#~ msgid "About us"
-#~ msgstr "درباره ما"
-
-#, php-format
-#~ msgid "Developer: %s"
-#~ msgstr "توسعه دهنده: %s"
-
-#, php-format
-#~ msgid "Email: %s"
-#~ msgstr "ایمیل: %s"
-
-#, php-format
-#~ msgid "Telegram: %s"
-#~ msgstr "تلگرام: %s"
-
-#~ msgid "Persian Dictionary"
-#~ msgstr "فرهنگ لغت فارسی"
+msgstr "https://ham3da.ir"
